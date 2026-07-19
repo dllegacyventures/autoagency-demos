@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friseursalon Acar — Friseur & Beauty in Rosenheim</title>
+<meta name="description" content="Friseursalon Acar in Rosenheim — Ihr Salon für Schnitt, Farbe und Pflege. Jetzt Termin sichern.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== Stitch-abgeleitetes System: "Quiet Luxury Salon" (helle Variante) ===== */
+:root{
+  --bg:#f6f1ea; --surface:#fffdfa; --surface-2:#f0e7dc; --line:#e2d5c6; --line-strong:#c9b7a3;
+  --ink:#2a2320; --ink-soft:#6f6258; --rose:#b07d6a; --rose-deep:#96634f; --gold:#c9a24a; --cream:#fffdfa;
+  --r:12px; --r-lg:18px; --r-xl:26px; --max:1200px; --gutter:24px;
+  --shadow:0 22px 55px -24px rgba(80,60,45,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.01em;line-height:1.12}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);display:inline-block}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:14px 26px;border-radius:var(--r-xl);border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
+.btn-rose{background:var(--rose);color:#fff}
+.btn-rose:hover{transform:translateY(-2px);background:var(--rose-deep)}
+.btn-ghost{border-color:var(--line-strong);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--rose);background:rgba(176,125,106,.07)}
+.stars{color:var(--gold);letter-spacing:2px}
+
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s,box-shadow .3s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(255,253,250,.8);backdrop-filter:blur(12px);border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(80,60,45,.4)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--ink)}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:14px;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--rose)}
+.nav-links .btn{padding:11px 22px}
+.menu-toggle{display:none;background:none;border:0;color:var(--ink);font-size:26px;cursor:pointer}
+
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(110% 90% at 82% 12%,rgba(176,125,106,.18),transparent 55%),
+  radial-gradient(90% 80% at 8% 95%,rgba(201,162,74,.12),transparent 60%),
+  linear-gradient(180deg,#f8f3ec,#f6f1ea 70%)}
+.hero-inner{position:relative;max-width:760px}
+.hero h1{font-size:clamp(44px,7vw,74px);margin:20px 0 0;color:var(--ink)}
+.hero h1 .accent{color:var(--rose);font-style:italic}
+.hero p.sub{font-size:clamp(17px,2vw,20px);color:var(--ink-soft);margin:22px 0 34px;max-width:520px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.rating-line{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-soft)}
+.rating-line .stars{font-size:18px}
+
+section{padding:clamp(64px,10vw,120px) 0}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(30px,4.5vw,44px);color:var(--ink);margin-top:14px}
+.sec-head p{color:var(--ink-soft);margin-top:14px}
+
+.usp{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px 30px;box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:var(--rose)}
+.card .ic{width:52px;height:52px;border-radius:14px;background:rgba(176,125,106,.12);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.card h3{font-size:22px;color:var(--ink);margin-bottom:8px}
+.card p{color:var(--ink-soft);font-size:15px}
+
+.menu-sec{background:var(--surface-2)}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 64px}
+.dish{padding:16px 0;border-bottom:1px dashed var(--line-strong)}
+.dish-top{display:flex;align-items:baseline;gap:10px}
+.dish-name{font-family:'Playfair Display',serif;font-weight:600;font-size:19px;color:var(--ink);white-space:nowrap}
+.leader{flex:1;border-bottom:1px dotted var(--line-strong);transform:translateY(-4px)}
+.dish-price{font-weight:600;color:var(--rose)}
+.dish-desc{color:var(--ink-soft);font-size:14px;margin-top:4px}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{aspect-ratio:4/3;border-radius:var(--r-lg);position:relative;overflow:hidden;border:1px solid var(--line)}
+.tile span{position:absolute;left:16px;bottom:14px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#fff;font-weight:600}
+.tile:nth-child(1){background:linear-gradient(135deg,#c9b7a3,#a98d76)}
+.tile:nth-child(2){background:linear-gradient(135deg,#d8b7a8,#b07d6a)}
+.tile:nth-child(3){background:linear-gradient(135deg,#cbb79a,#c9a24a)}
+.tile:nth-child(4){background:linear-gradient(135deg,#bfa892,#8a6f5c)}
+.tile:nth-child(5){background:linear-gradient(135deg,#d3c1af,#b19a80)}
+.tile:nth-child(6){background:linear-gradient(135deg,#d8bfa2,#b07d6a)}
+
+.rev-sec{background:var(--surface-2)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px}
+.review .stars{font-size:16px;margin-bottom:14px}
+.review q{font-style:italic;color:var(--ink);font-size:15.5px;display:block;margin-bottom:18px}
+.review .who{font-weight:600;font-size:14px;color:var(--ink)}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.info-row .ic{color:var(--rose);font-size:20px;min-width:24px}
+.info-row b{color:var(--ink);font-weight:600}
+.hours{width:100%;border-collapse:collapse;margin-top:6px}
+.hours td{padding:11px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-soft)}
+.hours td:last-child{text-align:right;color:var(--ink)}
+.reserve-box{background:linear-gradient(160deg,#fffdfa,#f0e7dc);border:1px solid var(--line-strong);border-radius:var(--r-xl);padding:40px 36px;box-shadow:var(--shadow)}
+.reserve-box h3{font-size:28px;color:var(--ink);margin-bottom:10px}
+.reserve-box p{color:var(--ink-soft);margin-bottom:24px}
+.reserve-box .btn{width:100%;justify-content:center}
+
+footer{background:var(--bg);border-top:1px solid var(--line);padding:44px 0;text-align:center}
+footer .brand{display:block;margin-bottom:8px}
+footer p{color:var(--line-strong);font-size:13px;margin-top:4px}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .nav-links{position:fixed;inset:76px 0 auto 0;flex-direction:column;background:rgba(255,253,250,.98);backdrop-filter:blur(12px);padding:24px;gap:20px;border-bottom:1px solid var(--line);display:none}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .usp,.gallery,.reviews,.menu-grid,.contact{grid-template-columns:1fr}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand">Friseursalon Acar</div>
+    <nav class="nav-links" id="navlinks">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#preise">Preise</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="btn btn-rose">Termin sichern</a>
+    </nav>
+    <button class="menu-toggle" id="burger" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="kicker">Ihr Salon in Rosenheim</span>
+    <h1>Ihr bester Look.<br><span class="accent">Bei uns zu Hause.</span></h1>
+    <p class="sub">Schnitt, Farbe und Pflege mit Gespür und Handwerk — mitten in Rosenheim.</p>
+    <div class="hero-cta">
+      <a href="#kontakt" class="btn btn-rose">Jetzt Termin sichern</a>
+      <a href="#preise" class="btn btn-ghost">Preise ansehen</a>
+    </div>
+    <div class="rating-line"><span class="stars">★★★★★</span> <b>4.7</b> · 76 Google-Bewertungen</div>
+  </div>
+</section>
+
+<!-- USP -->
+<section id="leistungen"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Leistungen</span><h2>Was wir für Sie tun</h2></div>
+  <div class="usp">
+    <div class="card reveal"><div class="ic">✂️</div><h3>Schnitt & Styling</h3><p>Präzise Schnitte, die zu Ihnen und Ihrem Alltag passen.</p></div>
+    <div class="card reveal"><div class="ic">🎨</div><h3>Farbe & Strähnen</h3><p>Von natürlich bis ausdrucksstark — mit hochwertigen Produkten.</p></div>
+    <div class="card reveal"><div class="ic">💆</div><h3>Pflege & Treatment</h3><p>Intensivpflege für gesundes, glänzendes Haar.</p></div>
+  </div>
+</div></section>
+
+<!-- PREISE -->
+<section id="preise" class="menu-sec"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Preise</span><h2>Transparente Preise</h2><p>Eine Auswahl unserer Leistungen — für ein individuelles Angebot beraten wir Sie gern.</p></div>
+  <div class="menu-grid">
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Waschen, Schneiden, Föhnen (Damen)</span><span class="leader"></span><span class="dish-price">ab 45€</span></div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Herrenschnitt</span><span class="leader"></span><span class="dish-price">ab 28€</span></div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Farbe / Ansatz</span><span class="leader"></span><span class="dish-price">ab 55€</span></div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Strähnen / Balayage</span><span class="leader"></span><span class="dish-price">ab 89€</span></div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Pflege-Treatment</span><span class="leader"></span><span class="dish-price">ab 25€</span></div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Hochsteckfrisur / Event</span><span class="leader"></span><span class="dish-price">ab 65€</span></div></div>
+  </div>
+</div></section>
+
+<!-- GALLERY -->
+<section id="galerie"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Galerie</span><h2>Unsere Arbeit</h2></div>
+  <div class="gallery">
+    <div class="tile reveal"><span>Schnitt</span></div>
+    <div class="tile reveal"><span>Farbe</span></div>
+    <div class="tile reveal"><span>Styling</span></div>
+    <div class="tile reveal"><span>Balayage</span></div>
+    <div class="tile reveal"><span>Salon</span></div>
+    <div class="tile reveal"><span>Team</span></div>
+  </div>
+</div></section>
+
+<!-- REVIEWS -->
+<section class="rev-sec"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Bewertungen</span><h2>4.7 von 5 · 76 Kund:innen</h2></div>
+  <div class="reviews">
+    <div class="review reveal"><div class="stars">★★★★★</div><q>Bester Salon in Rosenheim — ich fühle mich immer top beraten.</q><div class="who">— Zufriedene Kundin</div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><q>Endlich jemand, der genau zuhört. Farbe sitzt perfekt.</q><div class="who">— Stammkundin</div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><q>Angenehme Atmosphäre, faire Preise, tolles Ergebnis.</q><div class="who">— Google-Rezension</div></div>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="kontakt"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Kontakt</span><h2>Besuchen Sie uns</h2></div>
+  <div class="contact">
+    <div class="reveal">
+      <div class="info-row"><span class="ic">📍</span><div><b>Adresse</b><br>Prinzregentenstraße 14, 83022 Rosenheim, Deutschland</div></div>
+      <div class="info-row"><span class="ic">📞</span><div><b>Telefon</b><br><a href="tel:08031381433">08031 381433</a></div></div>
+      <h3 class="serif" style="margin:28px 0 6px;color:var(--ink);font-size:22px">Öffnungszeiten</h3>
+      <table class="hours">
+        <tr><td>Dienstag – Freitag</td><td>09:00 – 18:30</td></tr>
+        <tr><td>Samstag</td><td>09:00 – 14:00</td></tr>
+        <tr><td>Sonntag & Montag</td><td>Geschlossen</td></tr>
+      </table>
+    </div>
+    <div class="reserve-box reveal">
+      <h3>Termin sichern</h3>
+      <p>Rufen Sie uns an — wir finden garantiert einen Termin, der passt.</p>
+      <a href="tel:08031381433" class="btn btn-rose">📞 08031 381433</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">Friseursalon Acar</span>
+    <p>Prinzregentenstraße 14, 83022 Rosenheim, Deutschland</p>
+    <p>© 2026 Friseursalon Acar · Alle Rechte vorbehalten</p>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+document.getElementById('burger').onclick=()=>document.getElementById('navlinks').classList.toggle('open');
+document.querySelectorAll('#navlinks a').forEach(a=>a.onclick=()=>document.getElementById('navlinks').classList.remove('open'));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

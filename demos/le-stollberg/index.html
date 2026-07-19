@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Stollberg — Restaurant in München-Altstadt-Lehel</title>
+<meta name="description" content="Le Stollberg in München-Altstadt-Lehel — frische Zutaten, ehrliche Küche, herzlicher Service. Jetzt Tisch reservieren.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== Stitch Design System: "Modern Epicurean" ===== */
+:root{
+  --bg:#161311; --surface:#1e1b19; --surface-2:#231f1d; --surface-3:#2d2927;
+  --on:#e9e1dd; --on-var:#d0c4be; --outline:#4d4541; --outline-strong:#998f8a;
+  --gold:#e9c349; --gold-deep:#d4af37; --cream:#fdfbf7;
+  --r-sm:8px; --r:12px; --r-lg:16px; --r-xl:24px;
+  --max:1200px; --gutter:24px;
+  --shadow:0 24px 60px -20px rgba(0,0,0,.55);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--on);font-family:'Montserrat',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:inline-block}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:14px 26px;border-radius:var(--r-xl);border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s}
+.btn-gold{background:var(--gold);color:#241a00}
+.btn-gold:hover{transform:translateY(-2px);background:var(--gold-deep)}
+.btn-ghost{border-color:rgba(233,195,73,.5);color:var(--cream)}
+.btn-ghost:hover{border-color:var(--gold);background:rgba(233,195,73,.08)}
+.stars{color:var(--gold);letter-spacing:2px}
+
+/* ===== Nav (glassmorphic) ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(22,19,17,.72);backdrop-filter:blur(12px);border-bottom-color:var(--outline)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--cream)}
+.nav-links{display:flex;align-items:center;gap:34px}
+.nav-links a{font-size:14px;color:var(--on-var);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-links .btn{padding:11px 22px}
+.menu-toggle{display:none;background:none;border:0;color:var(--cream);font-size:26px;cursor:pointer}
+
+/* ===== Hero ===== */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(120% 90% at 78% 15%,rgba(233,195,73,.16),transparent 55%),
+  radial-gradient(90% 80% at 12% 90%,rgba(61,56,54,.5),transparent 60%),
+  linear-gradient(180deg,#1b1714,#161311 70%)}
+.hero-inner{position:relative;max-width:760px}
+.hero h1{font-size:clamp(44px,7vw,74px);margin:20px 0 0;color:var(--cream)}
+.hero h1 .accent{color:var(--gold);font-style:italic}
+.hero p.sub{font-size:clamp(17px,2vw,20px);color:var(--on-var);margin:22px 0 34px;max-width:520px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.rating-line{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--on-var)}
+.rating-line .stars{font-size:18px}
+
+/* ===== Sections ===== */
+section{padding:clamp(64px,10vw,120px) 0}
+.sec-head{max-width:640px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(30px,4.5vw,44px);color:var(--cream);margin-top:14px}
+.sec-head p{color:var(--on-var);margin-top:14px}
+
+/* USP */
+.usp{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--surface-2);border:1px solid var(--outline);border-radius:var(--r-lg);padding:34px 30px;box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(233,195,73,.4)}
+.card .ic{width:52px;height:52px;border-radius:14px;background:rgba(233,195,73,.12);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.card h3{font-size:22px;color:var(--cream);margin-bottom:8px}
+.card p{color:var(--on-var);font-size:15px}
+
+/* Menu (dot-leader) */
+.menu-sec{background:var(--surface)}
+.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 64px}
+.dish{padding:16px 0;border-bottom:1px dashed var(--outline)}
+.dish-top{display:flex;align-items:baseline;gap:10px}
+.dish-name{font-family:'Playfair Display',serif;font-weight:600;font-size:19px;color:var(--cream);white-space:nowrap}
+.leader{flex:1;border-bottom:1px dotted var(--outline-strong);transform:translateY(-4px)}
+.dish-price{font-weight:600;color:var(--gold)}
+.dish-desc{color:var(--on-var);font-size:14px;margin-top:4px}
+
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tile{aspect-ratio:4/3;border-radius:var(--r-lg);position:relative;overflow:hidden;border:1px solid var(--outline)}
+.tile span{position:absolute;left:16px;bottom:14px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(253,251,247,.85);font-weight:600}
+.tile:nth-child(1){background:linear-gradient(135deg,#2a2320,#3d3836)}
+.tile:nth-child(2){background:linear-gradient(135deg,#33291c,#5a4a20)}
+.tile:nth-child(3){background:linear-gradient(135deg,#241f1d,#463c30)}
+.tile:nth-child(4){background:linear-gradient(135deg,#2d2416,#4d3f16)}
+.tile:nth-child(5){background:linear-gradient(135deg,#231f1d,#3a322b)}
+.tile:nth-child(6){background:linear-gradient(135deg,#3a2e18,#e9c34933)}
+
+/* Reviews */
+.rev-sec{background:var(--surface)}
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review{background:var(--surface-2);border:1px solid var(--outline);border-radius:var(--r-lg);padding:30px}
+.review .stars{font-size:16px;margin-bottom:14px}
+.review q{font-style:italic;color:var(--on);font-size:15.5px;display:block;margin-bottom:18px}
+.review .who{font-weight:600;font-size:14px;color:var(--cream)}
+
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--outline)}
+.info-row .ic{color:var(--gold);font-size:20px;min-width:24px}
+.info-row b{color:var(--cream);font-weight:600}
+.hours{width:100%;border-collapse:collapse;margin-top:6px}
+.hours td{padding:11px 0;border-bottom:1px solid var(--outline);font-size:15px;color:var(--on-var)}
+.hours td:last-child{text-align:right;color:var(--cream)}
+.reserve-box{background:linear-gradient(160deg,#231f1d,#1a1614);border:1px solid rgba(233,195,73,.35);border-radius:var(--r-xl);padding:40px 36px;box-shadow:var(--shadow)}
+.reserve-box h3{font-size:28px;color:var(--cream);margin-bottom:10px}
+.reserve-box p{color:var(--on-var);margin-bottom:24px}
+.reserve-box .btn{width:100%;justify-content:center}
+
+/* Footer */
+footer{background:var(--bg);border-top:1px solid var(--outline);padding:44px 0;text-align:center}
+footer .brand{display:block;margin-bottom:8px}
+footer p{color:var(--outline-strong);font-size:13px;margin-top:4px}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  .nav-links{position:fixed;inset:76px 0 auto 0;flex-direction:column;background:rgba(22,19,17,.97);backdrop-filter:blur(12px);padding:24px;gap:20px;border-bottom:1px solid var(--outline);display:none}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+  .usp,.gallery,.reviews,.menu-grid,.contact{grid-template-columns:1fr}
+  section{padding:64px 0}
+}
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="wrap nav">
+    <div class="brand">Le Stollberg</div>
+    <nav class="nav-links" id="navlinks">
+      <a href="#kueche">Küche</a>
+      <a href="#speisekarte">Speisekarte</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="btn btn-gold">Tisch reservieren</a>
+    </nav>
+    <button class="menu-toggle" id="burger" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <span class="kicker">Willkommen bei Le Stollberg</span>
+    <h1>Gutes Essen.<br><span class="accent">Echte Gastfreundschaft.</span></h1>
+    <p class="sub">Frische Zutaten, ehrliche Küche und ein Ort mitten in München-Altstadt-Lehel, an dem man gerne bleibt.</p>
+    <div class="hero-cta">
+      <a href="#kontakt" class="btn btn-gold">Jetzt Tisch reservieren</a>
+      <a href="#speisekarte" class="btn btn-ghost">Speisekarte ansehen</a>
+    </div>
+    <div class="rating-line"><span class="stars">★★★★★</span> <b>4.8</b> · 392 Google-Bewertungen</div>
+  </div>
+</section>
+
+<!-- USP -->
+<section id="kueche"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Unsere Küche</span><h2>Warum unsere Gäste wiederkommen</h2></div>
+  <div class="usp">
+    <div class="card reveal"><div class="ic">🌿</div><h3>Frische Zutaten</h3><p>Täglich frisch und mit Sorgfalt ausgewählt — regional, wo immer es geht.</p></div>
+    <div class="card reveal"><div class="ic">👨‍🍳</div><h3>Hausgemacht</h3><p>Mit Liebe von Hand zubereitet, nach Rezepten, die man schmeckt.</p></div>
+    <div class="card reveal"><div class="ic">🤝</div><h3>Herzlicher Service</h3><p>Sie sind bei uns Gast, kein Tisch. Persönlich, aufmerksam, ehrlich.</p></div>
+  </div>
+</div></section>
+
+<!-- MENU -->
+<section id="speisekarte" class="menu-sec"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Speisekarte</span><h2>Eine kleine Auswahl</h2><p>Unsere Karte wechselt mit der Saison — hier ein Vorgeschmack.</p></div>
+  <div class="menu-grid">
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Rinderfilet</span><span class="leader"></span><span class="dish-price">28€</span></div><div class="dish-desc">Zart gegart, mit Rotweinjus und Kartoffelgratin.</div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Hausgemachte Pasta</span><span class="leader"></span><span class="dish-price">16€</span></div><div class="dish-desc">Täglich frisch, mit Salbei-Butter und Parmesan.</div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Wildkräutersalat</span><span class="leader"></span><span class="dish-price">12€</span></div><div class="dish-desc">Mit gerösteten Kernen und Honig-Senf-Dressing.</div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Fisch des Tages</span><span class="leader"></span><span class="dish-price">24€</span></div><div class="dish-desc">Fangfrisch, mit saisonalem Gemüse.</div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Vegetarische Bowl</span><span class="leader"></span><span class="dish-price">15€</span></div><div class="dish-desc">Bunt, sättigend und voller frischer Aromen.</div></div>
+    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Dessertvariation</span><span class="leader"></span><span class="dish-price">9€</span></div><div class="dish-desc">Hausgemacht — der süße Abschluss.</div></div>
+  </div>
+</div></section>
+
+<!-- GALLERY -->
+<section id="galerie"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Galerie</span><h2>Ein Blick zu uns</h2></div>
+  <div class="gallery">
+    <div class="tile reveal"><span>Ambiente</span></div>
+    <div class="tile reveal"><span>Vorspeisen</span></div>
+    <div class="tile reveal"><span>Hauptgänge</span></div>
+    <div class="tile reveal"><span>Desserts</span></div>
+    <div class="tile reveal"><span>Bar</span></div>
+    <div class="tile reveal"><span>Terrasse</span></div>
+  </div>
+</div></section>
+
+<!-- REVIEWS -->
+<section class="rev-sec"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Bewertungen</span><h2>4.8 von 5 · 392 Gäste</h2></div>
+  <div class="reviews">
+    <div class="review reveal"><div class="stars">★★★★★</div><q>Bestes Essen in München-Altstadt-Lehel. Kommen definitiv wieder!</q><div class="who">— Zufriedener Gast</div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><q>Herzlicher Service und alles frisch zubereitet. Absolute Empfehlung.</q><div class="who">— Stammgast</div></div>
+    <div class="review reveal"><div class="stars">★★★★★</div><q>Gemütliches Ambiente, faire Preise, große Portionen.</q><div class="who">— Google-Rezension</div></div>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="kontakt"><div class="wrap">
+  <div class="sec-head reveal"><span class="kicker">Kontakt</span><h2>Besuchen Sie uns</h2></div>
+  <div class="contact">
+    <div class="reveal">
+      <div class="info-row"><span class="ic">📍</span><div><b>Adresse</b><br>Stollbergstraße 2, 80539 München-Altstadt-Lehel, Deutschland</div></div>
+      <div class="info-row"><span class="ic">📞</span><div><b>Telefon</b><br><a href="tel:08924243450">089 24243450</a></div></div>
+      <h3 class="serif" style="margin:28px 0 6px;color:var(--cream);font-size:22px">Öffnungszeiten</h3>
+      <table class="hours">
+        <tr><td>Montag – Freitag</td><td>11:30 – 22:00</td></tr>
+        <tr><td>Samstag</td><td>12:00 – 23:00</td></tr>
+        <tr><td>Sonntag</td><td>12:00 – 21:00</td></tr>
+      </table>
+    </div>
+    <div class="reserve-box reveal">
+      <h3>Tisch reservieren</h3>
+      <p>Rufen Sie uns an oder kommen Sie spontan vorbei — wir freuen uns auf Sie.</p>
+      <a href="tel:08924243450" class="btn btn-gold">📞 089 24243450</a>
+    </div>
+  </div>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">Le Stollberg</span>
+    <p>Stollbergstraße 2, 80539 München-Altstadt-Lehel, Deutschland</p>
+    <p>© 2026 Le Stollberg · Alle Rechte vorbehalten</p>
+  </div>
+</footer>
+
+<script>
+const hdr=document.getElementById('hdr');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
+document.getElementById('burger').onclick=()=>document.getElementById('navlinks').classList.toggle('open');
+document.querySelectorAll('#navlinks a').forEach(a=>a.onclick=()=>document.getElementById('navlinks').classList.remove('open'));
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
