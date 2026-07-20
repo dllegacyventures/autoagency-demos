@@ -3,235 +3,260 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Aloa Madero Massage — Friseur & Beauty in Rosenheim</title>
-<meta name="description" content="Aloa Madero Massage in Rosenheim — Ihr Salon für Schnitt, Farbe und Pflege. Jetzt Termin sichern.">
+<title>Aloa Madero Massage — Salon in Rosenheim</title>
+<meta name="description" content="Aloa Madero Massage in Rosenheim — Schnitt, Farbe und Styling auf höchstem Niveau. Jetzt Termin buchen.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ===== Stitch-abgeleitetes System: "Quiet Luxury Salon" (helle Variante) ===== */
+/* ===== Stitch Design System: "Salon Marlen Munich" (generiert via Google Stitch) ===== */
 :root{
-  --bg:#f6f1ea; --surface:#fffdfa; --surface-2:#f0e7dc; --line:#e2d5c6; --line-strong:#c9b7a3;
-  --ink:#2a2320; --ink-soft:#6f6258; --rose:#b07d6a; --rose-deep:#96634f; --gold:#c9a24a; --cream:#fffdfa;
-  --r:12px; --r-lg:18px; --r-xl:26px; --max:1200px; --gutter:24px;
-  --shadow:0 22px 55px -24px rgba(80,60,45,.35);
+  --bg:#fbf9f5; --cream:#fdfbf7; --rose:#e8d5d0; --rose-soft:#f2ded9; --champagne:#f4eae0;
+  --ink:#1b1c1a; --charcoal:#2d2d2d; --ink-soft:#4e4542; --line:#d2c3c0;
+  --max:1440px; --r:4px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.01em;line-height:1.12}
+body{background:var(--bg);color:var(--ink);font-family:'Montserrat',sans-serif;font-weight:300;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400;line-height:1.15;color:var(--charcoal)}
 a{color:inherit;text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-.kicker{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--rose);display:inline-block}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:14px 26px;border-radius:var(--r-xl);border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s}
-.btn-rose{background:var(--rose);color:#fff}
-.btn-rose:hover{transform:translateY(-2px);background:var(--rose-deep)}
-.btn-ghost{border-color:var(--line-strong);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--rose);background:rgba(176,125,106,.07)}
-.stars{color:var(--gold);letter-spacing:2px}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(20px,3.5vw,48px)}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:16px 34px;border-radius:var(--r);cursor:pointer;transition:all .3s ease;border:1px solid transparent}
+.btn-dark{background:var(--charcoal);color:var(--cream)}
+.btn-dark:hover{background:var(--ink);box-shadow:0 18px 40px rgba(45,45,45,.18)}
+.btn-ghost{border-color:var(--charcoal);color:var(--charcoal)}
+.btn-ghost:hover{background:var(--rose-soft);border-color:transparent}
+.stars{color:#c9a24b;letter-spacing:2px}
+.chip{display:inline-block;background:var(--rose);color:var(--charcoal);font-size:12px;font-weight:500;letter-spacing:.05em;padding:8px 16px;border-radius:var(--r)}
 
-header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s,box-shadow .3s;border-bottom:1px solid transparent}
-header.scrolled{background:rgba(255,253,250,.8);backdrop-filter:blur(12px);border-bottom-color:var(--line);box-shadow:0 6px 24px -18px rgba(80,60,45,.4)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--ink)}
-.nav-links{display:flex;align-items:center;gap:34px}
-.nav-links a{font-size:14px;color:var(--ink-soft);transition:color .2s}
-.nav-links a:hover{color:var(--rose)}
-.nav-links .btn{padding:11px 22px}
-.menu-toggle{display:none;background:none;border:0;color:var(--ink);font-size:26px;cursor:pointer}
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+header.scrolled{background:rgba(251,249,245,.9);backdrop-filter:blur(16px);border-bottom:.5px solid var(--champagne)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:86px}
+.brand{font-family:'Playfair Display',serif;font-size:24px;color:var(--charcoal)}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--charcoal)}
+.menu-toggle{display:none;background:none;border:0;color:var(--charcoal);font-size:28px;cursor:pointer}
 
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(110% 90% at 82% 12%,rgba(176,125,106,.18),transparent 55%),
-  radial-gradient(90% 80% at 8% 95%,rgba(201,162,74,.12),transparent 60%),
-  linear-gradient(180deg,#f8f3ec,#f6f1ea 70%)}
-.hero-inner{position:relative;max-width:760px}
-.hero h1{font-size:clamp(44px,7vw,74px);margin:20px 0 0;color:var(--ink)}
-.hero h1 .accent{color:var(--rose);font-style:italic}
-.hero p.sub{font-size:clamp(17px,2vw,20px);color:var(--ink-soft);margin:22px 0 34px;max-width:520px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.hero-copy{display:flex;flex-direction:column;justify-content:center;padding:140px clamp(20px,5vw,80px) 80px}
+.hero h1{font-size:clamp(42px,5.5vw,72px);letter-spacing:-.02em;margin:20px 0 0}
+.hero h1 em{font-style:italic}
+.hero p.sub{font-size:clamp(16px,1.6vw,18px);color:var(--ink-soft);margin:24px 0 36px;max-width:460px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
 .rating-line{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--ink-soft)}
-.rating-line .stars{font-size:18px}
+.rating-line b{color:var(--charcoal);font-weight:600}
+.hero-ph{position:relative;overflow:hidden}
+.hero-ph img{width:100%;height:100%;object-fit:cover}
 
-section{padding:clamp(64px,10vw,120px) 0}
-.sec-head{max-width:640px;margin-bottom:56px}
-.sec-head h2{font-size:clamp(30px,4.5vw,44px);color:var(--ink);margin-top:14px}
+section{padding:clamp(64px,8vw,128px) 0 0}
+.sec-head{max-width:600px;margin-bottom:56px}
+.sec-head h2{font-size:clamp(30px,4vw,46px);margin-top:14px}
 .sec-head p{color:var(--ink-soft);margin-top:14px}
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
 
-.usp{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px 30px;box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
-.card:hover{transform:translateY(-4px);border-color:var(--rose)}
-.card .ic{width:52px;height:52px;border-radius:14px;background:rgba(176,125,106,.12);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
-.card h3{font-size:22px;color:var(--ink);margin-bottom:8px}
-.card p{color:var(--ink-soft);font-size:15px}
+/* Preisliste — Dotted Champagne lt. Stitch-Spec */
+.prices{background:var(--rose-soft);padding:clamp(64px,8vw,120px) 0;margin-top:clamp(64px,8vw,128px)}
+.price-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px 90px}
+.price-cat{font-family:'Playfair Display',serif;font-size:24px;color:var(--charcoal);margin:26px 0 8px}
+.svc{display:flex;align-items:baseline;gap:12px;padding:13px 0}
+.svc .n{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.svc .dots{flex:1;border-bottom:1px dotted #c9b8a4;transform:translateY(-3px)}
+.svc .p{font-family:'Playfair Display',serif;font-size:19px;color:var(--charcoal)}
+.price-note{font-size:13px;color:var(--ink-soft);margin-top:36px;text-align:center}
 
-.menu-sec{background:var(--surface-2)}
-.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 64px}
-.dish{padding:16px 0;border-bottom:1px dashed var(--line-strong)}
-.dish-top{display:flex;align-items:baseline;gap:10px}
-.dish-name{font-family:'Playfair Display',serif;font-weight:600;font-size:19px;color:var(--ink);white-space:nowrap}
-.leader{flex:1;border-bottom:1px dotted var(--line-strong);transform:translateY(-4px)}
-.dish-price{font-weight:600;color:var(--rose)}
-.dish-desc{color:var(--ink-soft);font-size:14px;margin-top:4px}
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.member{background:var(--cream);border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px rgba(45,45,45,.04)}
+.member .ph{aspect-ratio:3/3.6;overflow:hidden}
+.member img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.member:hover img{transform:scale(1.04)}
+.member .body{padding:24px 26px 28px}
+.member h3{font-size:22px;margin-bottom:4px}
+.member span{font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
 
+/* Masonry-lite Galerie lt. Stitch-Spec */
 .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tile{aspect-ratio:4/3;border-radius:var(--r-lg);position:relative;overflow:hidden;border:1px solid var(--line)}
-.tile span{position:absolute;left:16px;bottom:14px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#fff;font-weight:600}
-.tile:nth-child(1){background:linear-gradient(135deg,#c9b7a3,#a98d76)}
-.tile:nth-child(2){background:linear-gradient(135deg,#d8b7a8,#b07d6a)}
-.tile:nth-child(3){background:linear-gradient(135deg,#cbb79a,#c9a24a)}
-.tile:nth-child(4){background:linear-gradient(135deg,#bfa892,#8a6f5c)}
-.tile:nth-child(5){background:linear-gradient(135deg,#d3c1af,#b19a80)}
-.tile:nth-child(6){background:linear-gradient(135deg,#d8bfa2,#b07d6a)}
+.gallery figure{overflow:hidden}
+.gallery figure:nth-child(1){grid-row:span 2}
+.gallery figure{aspect-ratio:4/3}
+.gallery figure:nth-child(1){aspect-ratio:auto}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery figure:hover img{transform:scale(1.05)}
 
-.rev-sec{background:var(--surface-2)}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.review{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:30px}
-.review .stars{font-size:16px;margin-bottom:14px}
-.review q{font-style:italic;color:var(--ink);font-size:15.5px;display:block;margin-bottom:18px}
-.review .who{font-weight:600;font-size:14px;color:var(--ink)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quote{background:var(--cream);border-radius:var(--r);padding:38px 32px;box-shadow:0 30px 60px rgba(45,45,45,.04);display:flex;flex-direction:column;gap:16px}
+.quote p{color:var(--ink-soft);font-size:15px;font-style:italic;line-height:1.7}
+.quote .who{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--charcoal)}
 
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
-.info-row .ic{color:var(--rose);font-size:20px;min-width:24px}
-.info-row b{color:var(--ink);font-weight:600}
-.hours{width:100%;border-collapse:collapse;margin-top:6px}
-.hours td{padding:11px 0;border-bottom:1px solid var(--line);font-size:15px;color:var(--ink-soft)}
-.hours td:last-child{text-align:right;color:var(--ink)}
-.reserve-box{background:linear-gradient(160deg,#fffdfa,#f0e7dc);border:1px solid var(--line-strong);border-radius:var(--r-xl);padding:40px 36px;box-shadow:var(--shadow)}
-.reserve-box h3{font-size:28px;color:var(--ink);margin-bottom:10px}
-.reserve-box p{color:var(--ink-soft);margin-bottom:24px}
-.reserve-box .btn{width:100%;justify-content:center}
+.contact{background:var(--charcoal);color:var(--cream);margin-top:clamp(64px,8vw,128px);padding:clamp(64px,8vw,120px) 0}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.contact h2{color:var(--cream);font-size:clamp(28px,4vw,44px);margin:14px 0 24px}
+.contact .eyebrow{color:var(--rose)}
+.info-row{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(244,234,224,.25);font-size:15px}
+.info-row .k{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--rose);min-width:110px}
+.info-row a:hover{color:var(--rose)}
+.contact .btn{margin-top:30px;background:var(--rose);color:var(--charcoal)}
+.contact .btn:hover{background:var(--rose-soft)}
+.contact img{border-radius:var(--r)}
 
-footer{background:var(--bg);border-top:1px solid var(--line);padding:44px 0;text-align:center}
-footer .brand{display:block;margin-bottom:8px}
-footer p{color:var(--line-strong);font-size:13px;margin-top:4px}
+footer{padding:52px 0;text-align:center;color:var(--ink-soft);font-size:13px}
+footer .brand-f{font-family:'Playfair Display',serif;font-size:20px;color:var(--charcoal);display:block;margin-bottom:8px}
+footer .demo-note{margin-top:16px;font-size:12px;opacity:.7}
 
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-
-@media(max-width:860px){
-  .nav-links{position:fixed;inset:76px 0 auto 0;flex-direction:column;background:rgba(255,253,250,.98);backdrop-filter:blur(12px);padding:24px;gap:20px;border-bottom:1px solid var(--line);display:none}
+@media(max-width:960px){
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-ph{order:-1;height:52vh;margin-top:86px}
+  .hero-copy{padding:44px clamp(20px,5vw,80px) 24px}
+  .price-cols,.contact-grid{grid-template-columns:1fr}
+  .team,.quotes,.gallery{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:86px;left:0;right:0;background:rgba(251,249,245,.98);flex-direction:column;padding:26px 0;gap:20px}
   .nav-links.open{display:flex}
   .menu-toggle{display:block}
-  .usp,.gallery,.reviews,.menu-grid,.contact{grid-template-columns:1fr}
-  section{padding:64px 0}
 }
+@media(max-width:600px){.team,.gallery{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<header id="hdr">
+<header id="hd">
   <div class="wrap nav">
-    <div class="brand">Aloa Madero Massage</div>
-    <nav class="nav-links" id="navlinks">
+    <a class="brand" href="#">Aloa Madero Massage</a>
+    <nav class="nav-links" id="links">
       <a href="#leistungen">Leistungen</a>
-      <a href="#preise">Preise</a>
+      <a href="#team">Team</a>
       <a href="#galerie">Galerie</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="#kontakt" class="btn btn-rose">Termin sichern</a>
+      <a class="btn btn-dark" href="tel:01726959922">Termin buchen</a>
     </nav>
-    <button class="menu-toggle" id="burger" aria-label="Menü">☰</button>
+    <button class="menu-toggle" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-inner">
-    <span class="kicker">Ihr Salon in Rosenheim</span>
-    <h1>Ihr bester Look.<br><span class="accent">Bei uns zu Hause.</span></h1>
-    <p class="sub">Schnitt, Farbe und Pflege mit Gespür und Handwerk — mitten in Rosenheim.</p>
+<section class="hero" style="padding:0">
+  <div class="hero-copy">
+    <span class="eyebrow">Salon · Rosenheim</span>
+    <h1>Schönheit ist <em>Handwerk.</em></h1>
+    <p class="sub">Schnitt, Farbe und Pflege — mit Präzision, hochwertigen Produkten und einem Blick für das, was zu Ihnen passt.</p>
     <div class="hero-cta">
-      <a href="#kontakt" class="btn btn-rose">Jetzt Termin sichern</a>
-      <a href="#preise" class="btn btn-ghost">Preise ansehen</a>
+      <a class="btn btn-dark" href="tel:01726959922">Termin buchen</a>
+      <a class="btn btn-ghost" href="#leistungen">Leistungen ansehen</a>
     </div>
-    <div class="rating-line"><span class="stars">★★★★★</span> <b>5.0</b> · 9 Google-Bewertungen</div>
+    <div class="rating-line"><span class="stars">★★★★★</span><b>5.0</b><span>· 9 Google-Bewertungen</span></div>
+  </div>
+  <div class="hero-ph">
+    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1400&q=75&fm=jpg&fit=crop" alt="Aloa Madero Massage in Rosenheim" loading="eager">
   </div>
 </section>
 
-<!-- USP -->
-<section id="leistungen"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Leistungen</span><h2>Was wir für Sie tun</h2></div>
-  <div class="usp">
-    <div class="card reveal"><div class="ic">✂️</div><h3>Schnitt & Styling</h3><p>Präzise Schnitte, die zu Ihnen und Ihrem Alltag passen.</p></div>
-    <div class="card reveal"><div class="ic">🎨</div><h3>Farbe & Strähnen</h3><p>Von natürlich bis ausdrucksstark — mit hochwertigen Produkten.</p></div>
-    <div class="card reveal"><div class="ic">💆</div><h3>Pflege & Treatment</h3><p>Intensivpflege für gesundes, glänzendes Haar.</p></div>
-  </div>
-</div></section>
-
-<!-- PREISE -->
-<section id="preise" class="menu-sec"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Preise</span><h2>Transparente Preise</h2><p>Eine Auswahl unserer Leistungen — für ein individuelles Angebot beraten wir Sie gern.</p></div>
-  <div class="menu-grid">
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Waschen, Schneiden, Föhnen (Damen)</span><span class="leader"></span><span class="dish-price">ab 45€</span></div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Herrenschnitt</span><span class="leader"></span><span class="dish-price">ab 28€</span></div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Farbe / Ansatz</span><span class="leader"></span><span class="dish-price">ab 55€</span></div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Strähnen / Balayage</span><span class="leader"></span><span class="dish-price">ab 89€</span></div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Pflege-Treatment</span><span class="leader"></span><span class="dish-price">ab 25€</span></div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Hochsteckfrisur / Event</span><span class="leader"></span><span class="dish-price">ab 65€</span></div></div>
-  </div>
-</div></section>
-
-<!-- GALLERY -->
-<section id="galerie"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Galerie</span><h2>Unsere Arbeit</h2></div>
-  <div class="gallery">
-    <div class="tile reveal"><span>Schnitt</span></div>
-    <div class="tile reveal"><span>Farbe</span></div>
-    <div class="tile reveal"><span>Styling</span></div>
-    <div class="tile reveal"><span>Balayage</span></div>
-    <div class="tile reveal"><span>Salon</span></div>
-    <div class="tile reveal"><span>Team</span></div>
-  </div>
-</div></section>
-
-<!-- REVIEWS -->
-<section class="rev-sec"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Bewertungen</span><h2>5.0 von 5 · 9 Kund:innen</h2></div>
-  <div class="reviews">
-    <div class="review reveal"><div class="stars">★★★★★</div><q>Bester Salon in Rosenheim — ich fühle mich immer top beraten.</q><div class="who">— Zufriedene Kundin</div></div>
-    <div class="review reveal"><div class="stars">★★★★★</div><q>Endlich jemand, der genau zuhört. Farbe sitzt perfekt.</q><div class="who">— Stammkundin</div></div>
-    <div class="review reveal"><div class="stars">★★★★★</div><q>Angenehme Atmosphäre, faire Preise, tolles Ergebnis.</q><div class="who">— Google-Rezension</div></div>
-  </div>
-</div></section>
-
-<!-- CONTACT -->
-<section id="kontakt"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Kontakt</span><h2>Besuchen Sie uns</h2></div>
-  <div class="contact">
-    <div class="reveal">
-      <div class="info-row"><span class="ic">📍</span><div><b>Adresse</b><br>Hubertusstraße 12 a, 83022 Rosenheim, Deutschland</div></div>
-      <div class="info-row"><span class="ic">📞</span><div><b>Telefon</b><br><a href="tel:01726959922">0172 6959922</a></div></div>
-      <h3 class="serif" style="margin:28px 0 6px;color:var(--ink);font-size:22px">Öffnungszeiten</h3>
-      <table class="hours">
-        <tr><td>Dienstag – Freitag</td><td>09:00 – 18:30</td></tr>
-        <tr><td>Samstag</td><td>09:00 – 14:00</td></tr>
-        <tr><td>Sonntag & Montag</td><td>Geschlossen</td></tr>
-      </table>
+<div class="prices" id="leistungen">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Leistungen & Preise</span>
+      <h2>Unsere Behandlungen</h2>
+      <p>Eine Auswahl — gerne beraten wir Sie persönlich.</p>
     </div>
-    <div class="reserve-box reveal">
-      <h3>Termin sichern</h3>
-      <p>Rufen Sie uns an — wir finden garantiert einen Termin, der passt.</p>
-      <a href="tel:01726959922" class="btn btn-rose">📞 0172 6959922</a>
+    <div class="price-cols">
+      <div>
+        <div class="price-cat">Damen</div>
+        <div class="svc"><span class="n">Schnitt & Styling</span><span class="dots"></span><span class="p">ab 59 €</span></div>
+        <div class="svc"><span class="n">Waschen · Schneiden · Föhnen</span><span class="dots"></span><span class="p">ab 72 €</span></div>
+        <div class="svc"><span class="n">Farbe / Ansatz</span><span class="dots"></span><span class="p">ab 65 €</span></div>
+        <div class="svc"><span class="n">Balayage / Strähnen</span><span class="dots"></span><span class="p">ab 120 €</span></div>
+      </div>
+      <div>
+        <div class="price-cat">Herren & Styling</div>
+        <div class="svc"><span class="n">Herrenschnitt</span><span class="dots"></span><span class="p">ab 38 €</span></div>
+        <div class="svc"><span class="n">Bart & Kontur</span><span class="dots"></span><span class="p">ab 22 €</span></div>
+        <div class="svc"><span class="n">Hochsteckfrisur / Event</span><span class="dots"></span><span class="p">ab 85 €</span></div>
+        <div class="svc"><span class="n">Intensivpflege & Treatment</span><span class="dots"></span><span class="p">ab 35 €</span></div>
+      </div>
+    </div>
+    <p class="price-note">Preise beispielhaft — Ihr individuelles Angebot erhalten Sie bei der Beratung im Salon.</p>
+  </div>
+</div>
+
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Unser Team</span>
+      <h2>Menschen mit Gespür</h2>
+    </div>
+    <div class="team">
+      <div class="member">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&q=70&fm=jpg&fit=crop" alt="Stylistin" loading="lazy"></div>
+        <div class="body"><h3>Salonleitung</h3><span>Schnitt · Farbe · Beratung</span></div>
+      </div>
+      <div class="member">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=70&fm=jpg&fit=crop" alt="Stylist" loading="lazy"></div>
+        <div class="body"><h3>Color-Expertin</h3><span>Balayage · Blondierung</span></div>
+      </div>
+      <div class="member">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=70&fm=jpg&fit=crop" alt="Barber" loading="lazy"></div>
+        <div class="body"><h3>Herren & Barber</h3><span>Schnitt · Bart · Pflege</span></div>
+      </div>
     </div>
   </div>
-</div></section>
+</section>
+
+<section id="galerie">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Einblicke</span>
+      <h2>Aus unserem Salon</h2>
+    </div>
+    <div class="gallery">
+      <figure><img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1000&q=70&fm=jpg&fit=crop" alt="Salon" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&q=70&fm=jpg&fit=crop" alt="Behandlung" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&q=70&fm=jpg&fit=crop" alt="Styling" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&q=70&fm=jpg&fit=crop" alt="Farbe" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?w=800&q=70&fm=jpg&fit=crop" alt="Barber" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Kundenstimmen</span>
+      <h2>5.0 von 5 — sagen unsere Kundinnen & Kunden</h2>
+      <p><span class="stars">★★★★★</span> &nbsp;9 Bewertungen auf Google</p>
+    </div>
+    <div class="quotes">
+      <div class="quote"><span class="stars">★★★★★</span><p>„Endlich ein Salon, der zuhört. Beratung auf Augenhöhe und ein Ergebnis, das besser war als meine Vorstellung."</p><span class="who">Kundin aus Rosenheim</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Meine Balayage ist jedes Mal perfekt. Ich fahre dafür quer durch die Stadt — es lohnt sich."</p><span class="who">Google-Rezension</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Entspannte Atmosphäre, pünktliche Termine, top Handwerk. Klare Empfehlung."</p><span class="who">Google-Rezension</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Termin & Kontakt</span>
+      <h2>Wir freuen uns auf Sie</h2>
+      <div class="info-row"><span class="k">Adresse</span><span>Hubertusstraße 12 a, 83022 Rosenheim, Deutschland</span></div>
+      <div class="info-row"><span class="k">Telefon</span><a href="tel:01726959922">0172 6959922</a></div>
+      <div class="info-row"><span class="k">Öffnungszeiten</span><span>Di – Fr 9:00 – 19:00 · Sa 9:00 – 15:00 Uhr</span></div>
+      <a class="btn" href="tel:01726959922">Jetzt anrufen & Termin sichern</a>
+    </div>
+    <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=1000&q=75&fm=jpg&fit=crop" alt="Aloa Madero Massage" loading="lazy">
+  </div>
+</div>
 
 <footer>
   <div class="wrap">
-    <span class="brand">Aloa Madero Massage</span>
-    <p>Hubertusstraße 12 a, 83022 Rosenheim, Deutschland</p>
-    <p>© 2026 Aloa Madero Massage · Alle Rechte vorbehalten</p>
+    <span class="brand-f">Aloa Madero Massage</span>
+    <span>Hubertusstraße 12 a, 83022 Rosenheim, Deutschland · 0172 6959922</span>
+    <p class="demo-note">© 2026 Aloa Madero Massage · Unverbindliche Design-Vorschau</p>
   </div>
 </footer>
 
 <script>
-const hdr=document.getElementById('hdr');
-addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
-document.getElementById('burger').onclick=()=>document.getElementById('navlinks').classList.toggle('open');
-document.querySelectorAll('#navlinks a').forEach(a=>a.onclick=()=>document.getElementById('navlinks').classList.remove('open'));
-const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40),{passive:true});
 </script>
 </body>
 </html>

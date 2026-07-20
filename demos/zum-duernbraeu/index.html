@@ -4,247 +4,254 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zum Dürnbräu — Restaurant in München-Altstadt-Lehel</title>
-<meta name="description" content="Zum Dürnbräu in München-Altstadt-Lehel — frische Zutaten, ehrliche Küche, herzlicher Service. Jetzt Tisch reservieren.">
+<meta name="description" content="Zum Dürnbräu in München-Altstadt-Lehel — saisonale Küche, ausgesuchte Weine, herzlicher Service. Jetzt Tisch reservieren.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ===== Stitch Design System: "Modern Epicurean" ===== */
+/* ===== Stitch Design System: "Alpenrose Luxe" (generiert via Google Stitch) ===== */
 :root{
-  --bg:#161311; --surface:#1e1b19; --surface-2:#231f1d; --surface-3:#2d2927;
-  --on:#e9e1dd; --on-var:#d0c4be; --outline:#4d4541; --outline-strong:#998f8a;
-  --gold:#e9c349; --gold-deep:#d4af37; --cream:#fdfbf7;
-  --r-sm:8px; --r:12px; --r-lg:16px; --r-xl:24px;
-  --max:1200px; --gutter:24px;
-  --shadow:0 24px 60px -20px rgba(0,0,0,.55);
+  --bg:#0d0d0d; --surface:#131313; --charcoal:#1a1a1a; --charcoal-2:#201f1f;
+  --on:#e5e2e1; --on-var:#d0c5af; --outline:#4d4635;
+  --gold:#d4af37; --gold-bright:#f2ca50; --forest:#2d3e33;
+  --max:1280px; --gutter:32px; --gap:120px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--on);font-family:'Montserrat',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3,.serif{font-family:'Playfair Display',serif;font-weight:700;letter-spacing:-.01em;line-height:1.1}
+body{background:var(--bg);color:var(--on);font-family:'Montserrat',sans-serif;font-weight:300;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2;color:#fff}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-.kicker{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);display:inline-block}
-.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:14px 26px;border-radius:var(--r-xl);border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,border-color .2s}
-.btn-gold{background:var(--gold);color:#241a00}
-.btn-gold:hover{transform:translateY(-2px);background:var(--gold-deep)}
-.btn-ghost{border-color:rgba(233,195,73,.5);color:var(--cream)}
-.btn-ghost:hover{border-color:var(--gold);background:rgba(233,195,73,.08)}
-.stars{color:var(--gold);letter-spacing:2px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:16px 34px;cursor:pointer;transition:all .25s ease;border:1px solid transparent}
+.btn-gold{background:var(--gold);color:#0d0d0d}
+.btn-gold:hover{background:transparent;border-color:var(--gold);color:var(--gold)}
+.btn-ghost{border-color:rgba(212,175,55,.55);color:#fff}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);box-shadow:0 0 24px rgba(212,175,55,.25)}
+.frame{border:1px solid rgba(212,175,55,.35);padding:4px}
+.frame>.frame-in{border:1px solid rgba(212,175,55,.35)}
+.stars{color:var(--gold);letter-spacing:3px}
 
-/* ===== Nav (glassmorphic) ===== */
-header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
-header.scrolled{background:rgba(22,19,17,.72);backdrop-filter:blur(12px);border-bottom-color:var(--outline)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
-.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:22px;color:var(--cream)}
-.nav-links{display:flex;align-items:center;gap:34px}
-.nav-links a{font-size:14px;color:var(--on-var);transition:color .2s}
+/* Nav — Glassmorphism lt. Stitch-Spec */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+header.scrolled{background:rgba(26,26,26,.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,175,55,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:24px;color:#fff}
+.brand em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:38px}
+.nav-links a{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--on);transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
-.nav-links .btn{padding:11px 22px}
-.menu-toggle{display:none;background:none;border:0;color:var(--cream);font-size:26px;cursor:pointer}
+.menu-toggle{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
 
-/* ===== Hero ===== */
-.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;background:
-  radial-gradient(120% 90% at 78% 15%,rgba(233,195,73,.16),transparent 55%),
-  radial-gradient(90% 80% at 12% 90%,rgba(61,56,54,.5),transparent 60%),
-  linear-gradient(180deg,#1b1714,#161311 70%)}
-.hero-inner{position:relative;max-width:760px}
-.hero h1{font-size:clamp(44px,7vw,74px);margin:20px 0 0;color:var(--cream)}
-.hero h1 .accent{color:var(--gold);font-style:italic}
-.hero p.sub{font-size:clamp(17px,2vw,20px);color:var(--on-var);margin:22px 0 34px;max-width:520px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
-.rating-line{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--on-var)}
-.rating-line .stars{font-size:18px}
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden}
+.hero-img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,13,13,.55),rgba(13,13,13,.75) 65%,var(--bg))}
+.hero-inner{max-width:820px;text-align:center;margin:0 auto;padding:140px var(--gutter) 100px}
+.hero h1{font-size:clamp(46px,7vw,84px);font-weight:700;letter-spacing:-.02em;margin:26px 0 0}
+.hero p.sub{font-size:clamp(16px,2vw,19px);color:var(--on-var);margin:26px auto 40px;max-width:560px}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.rating-badge{display:inline-flex;align-items:center;gap:14px;padding:12px 26px;border:1px solid rgba(212,175,55,.35);background:rgba(26,26,26,.55);backdrop-filter:blur(12px);font-size:14px;color:var(--on-var)}
+.rating-badge b{color:#fff;font-weight:600}
 
-/* ===== Sections ===== */
-section{padding:clamp(64px,10vw,120px) 0}
-.sec-head{max-width:640px;margin-bottom:56px}
-.sec-head h2{font-size:clamp(30px,4.5vw,44px);color:var(--cream);margin-top:14px}
-.sec-head p{color:var(--on-var);margin-top:14px}
+section{padding:calc(var(--gap)/2) 0}
+section.pad{padding:var(--gap) 0 0}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 64px}
+.sec-head h2{font-size:clamp(30px,4.5vw,46px);font-weight:600;margin-top:16px}
+.sec-head p{color:var(--on-var);margin-top:16px}
 
-/* USP */
-.usp{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:var(--surface-2);border:1px solid var(--outline);border-radius:var(--r-lg);padding:34px 30px;box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
-.card:hover{transform:translateY(-4px);border-color:rgba(233,195,73,.4)}
-.card .ic{width:52px;height:52px;border-radius:14px;background:rgba(233,195,73,.12);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
-.card h3{font-size:22px;color:var(--cream);margin-bottom:8px}
-.card p{color:var(--on-var);font-size:15px}
+/* Über uns */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about h2{font-size:clamp(28px,4vw,42px);font-weight:600;margin:16px 0 20px;text-align:left}
+.about p{color:var(--on-var);margin-bottom:16px}
+.about .sig{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--gold);margin-top:26px}
 
-/* Menu (dot-leader) */
-.menu-sec{background:var(--surface)}
-.menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 64px}
-.dish{padding:16px 0;border-bottom:1px dashed var(--outline)}
-.dish-top{display:flex;align-items:baseline;gap:10px}
-.dish-name{font-family:'Playfair Display',serif;font-weight:600;font-size:19px;color:var(--cream);white-space:nowrap}
-.leader{flex:1;border-bottom:1px dotted var(--outline-strong);transform:translateY(-4px)}
-.dish-price{font-weight:600;color:var(--gold)}
-.dish-desc{color:var(--on-var);font-size:14px;margin-top:4px}
+/* Menü — Dot-Leader lt. Stitch-Spec */
+.menu-sec{background:var(--surface);border-top:1px solid rgba(212,175,55,.15);border-bottom:1px solid rgba(212,175,55,.15);padding:var(--gap) 0}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px 80px}
+.menu-cat{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:var(--gold);margin:26px 0 6px}
+.dish{display:flex;align-items:baseline;gap:12px;padding:14px 0}
+.dish .n{font-family:'Playfair Display',serif;font-size:19px;font-weight:500;color:#fff;white-space:nowrap}
+.dish .dots{flex:1;border-bottom:1px dotted var(--outline);transform:translateY(-4px)}
+.dish .p{font-weight:500;color:var(--gold);white-space:nowrap}
+.dish-desc{font-size:14px;color:var(--on-var);margin:-8px 0 6px}
+.menu-note{text-align:center;color:var(--on-var);font-size:14px;margin-top:44px}
 
-/* Gallery */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tile{aspect-ratio:4/3;border-radius:var(--r-lg);position:relative;overflow:hidden;border:1px solid var(--outline)}
-.tile span{position:absolute;left:16px;bottom:14px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:rgba(253,251,247,.85);font-weight:600}
-.tile:nth-child(1){background:linear-gradient(135deg,#2a2320,#3d3836)}
-.tile:nth-child(2){background:linear-gradient(135deg,#33291c,#5a4a20)}
-.tile:nth-child(3){background:linear-gradient(135deg,#241f1d,#463c30)}
-.tile:nth-child(4){background:linear-gradient(135deg,#2d2416,#4d3f16)}
-.tile:nth-child(5){background:linear-gradient(135deg,#231f1d,#3a322b)}
-.tile:nth-child(6){background:linear-gradient(135deg,#3a2e18,#e9c34933)}
+/* Galerie */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery figure{position:relative;overflow:hidden;aspect-ratio:1/1.15;border:1px solid rgba(212,175,55,.25)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery figure:hover img{transform:scale(1.06)}
+.gallery figure:nth-child(1),.gallery figure:nth-child(4){transform:translateY(28px)}
 
-/* Reviews */
-.rev-sec{background:var(--surface)}
-.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.review{background:var(--surface-2);border:1px solid var(--outline);border-radius:var(--r-lg);padding:30px}
-.review .stars{font-size:16px;margin-bottom:14px}
-.review q{font-style:italic;color:var(--on);font-size:15.5px;display:block;margin-bottom:18px}
-.review .who{font-weight:600;font-size:14px;color:var(--cream)}
+/* Stimmen */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quote{background:var(--charcoal);border:1px solid rgba(212,175,55,.2);padding:40px 34px;display:flex;flex-direction:column;gap:18px}
+.quote p{color:var(--on-var);font-size:15px;font-style:italic;line-height:1.7}
+.quote .who{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#fff}
 
-/* Contact */
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.info-row{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--outline)}
-.info-row .ic{color:var(--gold);font-size:20px;min-width:24px}
-.info-row b{color:var(--cream);font-weight:600}
-.hours{width:100%;border-collapse:collapse;margin-top:6px}
-.hours td{padding:11px 0;border-bottom:1px solid var(--outline);font-size:15px;color:var(--on-var)}
-.hours td:last-child{text-align:right;color:var(--cream)}
-.reserve-box{background:linear-gradient(160deg,#231f1d,#1a1614);border:1px solid rgba(233,195,73,.35);border-radius:var(--r-xl);padding:40px 36px;box-shadow:var(--shadow)}
-.reserve-box h3{font-size:28px;color:var(--cream);margin-bottom:10px}
-.reserve-box p{color:var(--on-var);margin-bottom:24px}
-.reserve-box .btn{width:100%;justify-content:center}
+/* Kontakt */
+.contact{background:var(--forest);padding:var(--gap) 0;margin-top:var(--gap)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.contact h2{font-size:clamp(28px,4vw,42px);font-weight:600;margin:16px 0 26px}
+.info-row{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(229,226,225,.15);font-size:15px}
+.info-row .k{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);min-width:110px}
+.info-row a:hover{color:var(--gold)}
+.contact .btn{margin-top:30px}
+.map{border:1px solid rgba(212,175,55,.35);min-height:380px;background:
+  linear-gradient(rgba(13,13,13,.35),rgba(13,13,13,.35)),
+  url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=70&fm=jpg&fit=crop') center/cover;
+  display:flex;align-items:flex-end;padding:22px}
+.map span{background:rgba(26,26,26,.8);backdrop-filter:blur(10px);padding:10px 18px;font-size:13px;letter-spacing:.08em}
 
-/* Footer */
-footer{background:var(--bg);border-top:1px solid var(--outline);padding:44px 0;text-align:center}
-footer .brand{display:block;margin-bottom:8px}
-footer p{color:var(--outline-strong);font-size:13px;margin-top:4px}
+footer{padding:56px 0;text-align:center;color:var(--on-var);font-size:13px}
+footer .brand{font-size:20px;margin-bottom:10px;display:block}
+footer .demo-note{margin-top:18px;font-size:12px;opacity:.65}
 
-/* Reveal */
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-
-@media(max-width:860px){
-  .nav-links{position:fixed;inset:76px 0 auto 0;flex-direction:column;background:rgba(22,19,17,.97);backdrop-filter:blur(12px);padding:24px;gap:20px;border-bottom:1px solid var(--outline);display:none}
+@media(max-width:960px){
+  .about,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .menu-cols{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:84px;left:0;right:0;background:rgba(13,13,13,.97);flex-direction:column;padding:28px 0;gap:22px}
   .nav-links.open{display:flex}
   .menu-toggle{display:block}
-  .usp,.gallery,.reviews,.menu-grid,.contact{grid-template-columns:1fr}
-  section{padding:64px 0}
 }
 </style>
 </head>
 <body>
 
-<header id="hdr">
+<header id="hd">
   <div class="wrap nav">
-    <div class="brand">Zum Dürnbräu</div>
-    <nav class="nav-links" id="navlinks">
-      <a href="#kueche">Küche</a>
-      <a href="#speisekarte">Speisekarte</a>
+    <a class="brand" href="#">Zum Dürnbräu<em>.</em></a>
+    <nav class="nav-links" id="links">
+      <a href="#ueber">Über uns</a>
+      <a href="#menue">Speisekarte</a>
       <a href="#galerie">Galerie</a>
       <a href="#kontakt">Kontakt</a>
-      <a href="#kontakt" class="btn btn-gold">Tisch reservieren</a>
+      <a class="btn btn-gold" href="tel:089222195">Tisch reservieren</a>
     </nav>
-    <button class="menu-toggle" id="burger" aria-label="Menü">☰</button>
+    <button class="menu-toggle" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
   </div>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="wrap hero-inner">
-    <span class="kicker">Willkommen bei Zum Dürnbräu</span>
-    <h1>Gutes Essen.<br><span class="accent">Echte Gastfreundschaft.</span></h1>
-    <p class="sub">Frische Zutaten, ehrliche Küche und ein Ort mitten in München-Altstadt-Lehel, an dem man gerne bleibt.</p>
+  <img class="hero-img" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=2000&q=75&fm=jpg&fit=crop" alt="Zum Dürnbräu — Restaurant in München-Altstadt-Lehel" loading="eager">
+  <div class="hero-inner">
+    <span class="eyebrow">Restaurant · München-Altstadt-Lehel</span>
+    <h1>Zum Dürnbräu</h1>
+    <p class="sub">Saisonale Küche aus regionalen Zutaten, ausgesuchte Weine und ein Abend, der in Erinnerung bleibt.</p>
     <div class="hero-cta">
-      <a href="#kontakt" class="btn btn-gold">Jetzt Tisch reservieren</a>
-      <a href="#speisekarte" class="btn btn-ghost">Speisekarte ansehen</a>
+      <a class="btn btn-gold" href="tel:089222195">Tisch reservieren</a>
+      <a class="btn btn-ghost" href="#menue">Speisekarte ansehen</a>
     </div>
-    <div class="rating-line"><span class="stars">★★★★★</span> <b>4.5</b> · 4389 Google-Bewertungen</div>
+    <span class="rating-badge"><span class="stars">★★★★★</span> <b>4.5</b> · 4389 Google-Bewertungen</span>
   </div>
 </section>
 
-<!-- USP -->
-<section id="kueche"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Unsere Küche</span><h2>Warum unsere Gäste wiederkommen</h2></div>
-  <div class="usp">
-    <div class="card reveal"><div class="ic">🌿</div><h3>Frische Zutaten</h3><p>Täglich frisch und mit Sorgfalt ausgewählt — regional, wo immer es geht.</p></div>
-    <div class="card reveal"><div class="ic">👨‍🍳</div><h3>Hausgemacht</h3><p>Mit Liebe von Hand zubereitet, nach Rezepten, die man schmeckt.</p></div>
-    <div class="card reveal"><div class="ic">🤝</div><h3>Herzlicher Service</h3><p>Sie sind bei uns Gast, kein Tisch. Persönlich, aufmerksam, ehrlich.</p></div>
-  </div>
-</div></section>
-
-<!-- MENU -->
-<section id="speisekarte" class="menu-sec"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Speisekarte</span><h2>Eine kleine Auswahl</h2><p>Unsere Karte wechselt mit der Saison — hier ein Vorgeschmack.</p></div>
-  <div class="menu-grid">
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Rinderfilet</span><span class="leader"></span><span class="dish-price">28€</span></div><div class="dish-desc">Zart gegart, mit Rotweinjus und Kartoffelgratin.</div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Hausgemachte Pasta</span><span class="leader"></span><span class="dish-price">16€</span></div><div class="dish-desc">Täglich frisch, mit Salbei-Butter und Parmesan.</div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Wildkräutersalat</span><span class="leader"></span><span class="dish-price">12€</span></div><div class="dish-desc">Mit gerösteten Kernen und Honig-Senf-Dressing.</div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Fisch des Tages</span><span class="leader"></span><span class="dish-price">24€</span></div><div class="dish-desc">Fangfrisch, mit saisonalem Gemüse.</div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Vegetarische Bowl</span><span class="leader"></span><span class="dish-price">15€</span></div><div class="dish-desc">Bunt, sättigend und voller frischer Aromen.</div></div>
-    <div class="dish reveal"><div class="dish-top"><span class="dish-name">Dessertvariation</span><span class="leader"></span><span class="dish-price">9€</span></div><div class="dish-desc">Hausgemacht — der süße Abschluss.</div></div>
-  </div>
-</div></section>
-
-<!-- GALLERY -->
-<section id="galerie"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Galerie</span><h2>Ein Blick zu uns</h2></div>
-  <div class="gallery">
-    <div class="tile reveal"><span>Ambiente</span></div>
-    <div class="tile reveal"><span>Vorspeisen</span></div>
-    <div class="tile reveal"><span>Hauptgänge</span></div>
-    <div class="tile reveal"><span>Desserts</span></div>
-    <div class="tile reveal"><span>Bar</span></div>
-    <div class="tile reveal"><span>Terrasse</span></div>
-  </div>
-</div></section>
-
-<!-- REVIEWS -->
-<section class="rev-sec"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Bewertungen</span><h2>4.5 von 5 · 4389 Gäste</h2></div>
-  <div class="reviews">
-    <div class="review reveal"><div class="stars">★★★★★</div><q>Bestes Essen in München-Altstadt-Lehel. Kommen definitiv wieder!</q><div class="who">— Zufriedener Gast</div></div>
-    <div class="review reveal"><div class="stars">★★★★★</div><q>Herzlicher Service und alles frisch zubereitet. Absolute Empfehlung.</q><div class="who">— Stammgast</div></div>
-    <div class="review reveal"><div class="stars">★★★★★</div><q>Gemütliches Ambiente, faire Preise, große Portionen.</q><div class="who">— Google-Rezension</div></div>
-  </div>
-</div></section>
-
-<!-- CONTACT -->
-<section id="kontakt"><div class="wrap">
-  <div class="sec-head reveal"><span class="kicker">Kontakt</span><h2>Besuchen Sie uns</h2></div>
-  <div class="contact">
-    <div class="reveal">
-      <div class="info-row"><span class="ic">📍</span><div><b>Adresse</b><br>Dürnbräugasse 2, 80331 München-Altstadt-Lehel, Deutschland</div></div>
-      <div class="info-row"><span class="ic">📞</span><div><b>Telefon</b><br><a href="tel:089222195">089 222195</a></div></div>
-      <h3 class="serif" style="margin:28px 0 6px;color:var(--cream);font-size:22px">Öffnungszeiten</h3>
-      <table class="hours">
-        <tr><td>Montag – Freitag</td><td>11:30 – 22:00</td></tr>
-        <tr><td>Samstag</td><td>12:00 – 23:00</td></tr>
-        <tr><td>Sonntag</td><td>12:00 – 21:00</td></tr>
-      </table>
-    </div>
-    <div class="reserve-box reveal">
-      <h3>Tisch reservieren</h3>
-      <p>Rufen Sie uns an oder kommen Sie spontan vorbei — wir freuen uns auf Sie.</p>
-      <a href="tel:089222195" class="btn btn-gold">📞 089 222195</a>
+<section class="pad" id="ueber">
+  <div class="wrap about">
+    <div class="frame"><div class="frame-in">
+      <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=1000&q=75&fm=jpg&fit=crop" alt="Küche im Zum Dürnbräu" loading="lazy">
+    </div></div>
+    <div>
+      <span class="eyebrow">Unsere Philosophie</span>
+      <h2>Handwerk, das man schmeckt</h2>
+      <p>Im Herzen von München-Altstadt-Lehel kochen wir, was die Saison hergibt — ehrlich, präzise und mit Respekt vor dem Produkt. Jedes Gericht entsteht bei uns von Hand, vom ersten Schnitt bis zum letzten Schliff auf dem Teller.</p>
+      <p>Ob Familienessen, Geschäftstermin oder der besondere Abend zu zweit: Unser Team nimmt sich Zeit für Sie.</p>
+      <p class="sig">— Ihr Team vom Zum Dürnbräu</p>
     </div>
   </div>
-</div></section>
+</section>
+
+<section class="menu-sec" id="menue">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Speisekarte</span>
+      <h2>Eine Auswahl unserer Klassiker</h2>
+      <p>Unsere Karte wechselt mit der Saison — dies ist ein kleiner Vorgeschmack.</p>
+    </div>
+    <div class="menu-cols">
+      <div>
+        <div class="menu-cat">Vorspeisen</div>
+        <div class="dish"><span class="n">Carpaccio vom Weiderind</span><span class="dots"></span><span class="p">16,50 €</span></div>
+        <p class="dish-desc">Wildkräuter, Parmesan, weißer Balsamico</p>
+        <div class="dish"><span class="n">Gebrannte Tomatensuppe</span><span class="dots"></span><span class="p">9,50 €</span></div>
+        <p class="dish-desc">Basilikumöl, geröstetes Sauerteigbrot</p>
+        <div class="dish"><span class="n">Ziegenkäse im Filoteig</span><span class="dots"></span><span class="p">13,00 €</span></div>
+        <p class="dish-desc">Honig, Walnüsse, Feldsalat</p>
+      </div>
+      <div>
+        <div class="menu-cat">Hauptgerichte</div>
+        <div class="dish"><span class="n">Filet vom Rind</span><span class="dots"></span><span class="p">34,50 €</span></div>
+        <p class="dish-desc">Kartoffelgratin, Marktgemüse, Rotweinjus</p>
+        <div class="dish"><span class="n">Gebratener Zander</span><span class="dots"></span><span class="p">28,00 €</span></div>
+        <p class="dish-desc">Beurre blanc, junger Spinat, Zitronenrisotto</p>
+        <div class="dish"><span class="n">Hausgemachte Pasta</span><span class="dots"></span><span class="p">19,50 €</span></div>
+        <p class="dish-desc">Steinpilze, Salbeibutter, gereifter Bergkäse</p>
+      </div>
+    </div>
+    <p class="menu-note">Preise beispielhaft — die aktuelle Karte erhalten Sie im Haus.</p>
+  </div>
+</section>
+
+<section class="pad" id="galerie">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Einblicke</span>
+      <h2>Momente aus unserem Haus</h2>
+    </div>
+    <div class="gallery">
+      <figure><img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?w=800&q=70&fm=jpg&fit=crop" alt="Gericht" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=70&fm=jpg&fit=crop" alt="Gericht" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=70&fm=jpg&fit=crop" alt="Gericht" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=70&fm=jpg&fit=crop" alt="Gericht" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Gästestimmen</span>
+      <h2>4.5 von 5 — sagen unsere Gäste</h2>
+      <p><span class="stars">★★★★★</span> &nbsp;4389 Bewertungen auf Google</p>
+    </div>
+    <div class="quotes">
+      <div class="quote"><span class="stars">★★★★★</span><p>„Vom Empfang bis zum Dessert einfach stimmig. Man merkt in jedem Detail, dass hier mit Leidenschaft gearbeitet wird."</p><span class="who">Gast aus München-Altstadt-Lehel</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Unser Stammlokal für besondere Anlässe. Die Karte überrascht jede Saison aufs Neue — und der Service ist herzlich wie am ersten Tag."</p><span class="who">Google-Rezension</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Hervorragende Küche, faire Preise, wunderbare Atmosphäre. Klare Empfehlung."</p><span class="who">Google-Rezension</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Reservierung & Kontakt</span>
+      <h2>Wir freuen uns auf Ihren Besuch</h2>
+      <div class="info-row"><span class="k">Adresse</span><span>Dürnbräugasse 2, 80331 München-Altstadt-Lehel, Deutschland</span></div>
+      <div class="info-row"><span class="k">Telefon</span><a href="tel:089222195">089 222195</a></div>
+      <div class="info-row"><span class="k">Küche</span><span>Di – So · 11:30 – 14:30 & 17:30 – 22:00 Uhr</span></div>
+      <div class="info-row"><span class="k">Ruhetag</span><span>Montag</span></div>
+      <a class="btn btn-gold" href="tel:089222195">Jetzt anrufen & reservieren</a>
+    </div>
+    <div class="map"><span>Zum Dürnbräu · München-Altstadt-Lehel</span></div>
+  </div>
+</div>
 
 <footer>
   <div class="wrap">
-    <span class="brand">Zum Dürnbräu</span>
-    <p>Dürnbräugasse 2, 80331 München-Altstadt-Lehel, Deutschland</p>
-    <p>© 2026 Zum Dürnbräu · Alle Rechte vorbehalten</p>
+    <span class="brand">Zum Dürnbräu<em style="color:var(--gold)">.</em></span>
+    <span>Dürnbräugasse 2, 80331 München-Altstadt-Lehel, Deutschland · 089 222195</span>
+    <p class="demo-note">© 2026 Zum Dürnbräu · Unverbindliche Design-Vorschau</p>
   </div>
 </footer>
 
 <script>
-const hdr=document.getElementById('hdr');
-addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>20));
-document.getElementById('burger').onclick=()=>document.getElementById('navlinks').classList.toggle('open');
-document.querySelectorAll('#navlinks a').forEach(a=>a.onclick=()=>document.getElementById('navlinks').classList.remove('open'));
-const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40),{passive:true});
 </script>
 </body>
 </html>
