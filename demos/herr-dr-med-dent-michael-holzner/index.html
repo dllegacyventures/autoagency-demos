@@ -3,203 +3,174 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Herr Dr. med. dent. Michael Holzner — Ihr Betrieb in Rosenheim</title>
-<meta name="description" content="Herr Dr. med. dent. Michael Holzner in Rosenheim — Qualität, Verlässlichkeit und faire Preise. Jetzt kostenlos anfragen.">
+<title>Herr Dr. med. dent. Michael Holzner — Zahnarztpraxis in Rosenheim</title>
+<meta name="description" content="Herr Dr. med. dent. Michael Holzner — Zahnarztpraxis in Rosenheim. Jetzt Termin vereinbaren.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-/* ===== Stitch Design System: "Meister-Präzision" (generiert via Google Stitch) ===== */
+/* ===== Stitch Design System: "Sanfte Brise Dental" (generiert via Google Stitch) ===== */
 :root{
-  --navy:#002147; --navy-deep:#000a1e; --amber:#d4af37; --amber-soft:#fed65b;
-  --bg:#ffffff; --gray:#f8f9fa; --line:#e2e8f0;
-  --ink:#191c1d; --ink-soft:#44474e;
-  --max:1280px; --gutter:24px;
+  --teal:#006767; --teal-soft:#1d8181; --teal-tint:rgba(0,103,103,.08);
+  --bg:#f9f9fb; --card:#ffffff; --line:#bdc9c8;
+  --ink:#1a1c1e; --ink-soft:#3e4948; --gold:#cba72f;
+  --max:1200px; --r:8px; --r-lg:16px; --r-xl:24px;
+  --shadow:0 18px 45px rgba(0,103,103,.10);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'Montserrat',sans-serif;font-weight:700;line-height:1.15;letter-spacing:-.02em;color:var(--navy-deep)}
+body{background:var(--bg);color:var(--ink);font-family:'Manrope',sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-weight:700;letter-spacing:-.02em;line-height:1.2;color:var(--ink)}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--amber)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:600;padding:16px 32px;cursor:pointer;transition:all .2s ease;border:1px solid transparent}
-.btn-amber{background:var(--amber);color:var(--navy-deep)}
-.btn-amber:hover{background:var(--amber-soft)}
-.btn-navy{background:var(--navy);color:#fff}
-.btn-navy:hover{background:var(--navy-deep)}
-.btn-ghost{border-color:#fff;color:#fff}
-.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
-.stars{color:var(--amber);letter-spacing:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(16px,3.5vw,40px)}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--teal)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:15px;font-weight:700;padding:16px 34px;border-radius:999px;cursor:pointer;transition:all .25s ease;border:2px solid transparent}
+.btn-teal{background:var(--teal);color:#fff}
+.btn-teal:hover{background:var(--teal-soft);transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-ghost{border-color:var(--teal);color:var(--teal)}
+.btn-ghost:hover{background:var(--teal-tint)}
+.stars{color:var(--gold);letter-spacing:2px}
+.chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:var(--teal);background:var(--teal-tint);border-radius:999px;padding:9px 18px}
 
-header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(249,249,251,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(189,201,200,.4)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:80px}
-.brand{font-family:'Montserrat',sans-serif;font-weight:800;font-size:20px;color:var(--navy)}
-.brand em{color:var(--amber);font-style:normal}
-.nav-links{display:flex;align-items:center;gap:32px}
-.nav-links a{font-size:14px;font-weight:500;color:var(--ink-soft);transition:color .2s}
-.nav-links a:hover{color:var(--navy)}
-.nav-phone{font-weight:700;color:var(--navy)!important}
-.menu-toggle{display:none;background:none;border:0;color:var(--navy);font-size:28px;cursor:pointer}
+.brand{font-weight:800;font-size:20px;color:var(--teal)}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{font-size:14px;font-weight:600;color:var(--ink-soft);transition:color .2s}
+.nav-links a:hover{color:var(--teal)}
+.nav-phone{font-weight:800;color:var(--teal)!important}
+.menu-toggle{display:none;background:none;border:0;color:var(--teal);font-size:28px;cursor:pointer}
 
-.hero{position:relative;isolation:isolate;color:#fff;padding:200px 0 120px;overflow:hidden}
-.hero-img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(0,10,30,.88) 20%,rgba(0,33,71,.55))}
-.hero-inner{max-width:680px}
-.hero h1{color:#fff;font-size:clamp(36px,5.5vw,58px);margin:18px 0 0}
-.hero p.sub{font-size:clamp(16px,1.8vw,19px);opacity:.9;margin:22px 0 34px;max-width:540px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:38px}
-.badges{display:flex;gap:12px;flex-wrap:wrap}
-.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;border:1px solid rgba(212,175,55,.6);padding:10px 18px;background:rgba(0,10,30,.4)}
-.badge .dot{width:8px;height:8px;background:var(--amber);border-radius:50%}
+.hero{padding:150px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(34px,4.8vw,52px);margin:18px 0 0}
+.hero p.sub{font-size:clamp(16px,1.8vw,19px);color:var(--ink-soft);margin:20px 0 30px;max-width:520px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.trust{display:flex;gap:12px;flex-wrap:wrap}
+.hero-ph{border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow)}
+.hero-ph img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.4}
 
-section{padding:80px 0}
-.sec-head{max-width:640px;margin-bottom:48px}
-.sec-head h2{font-size:clamp(28px,4vw,40px);margin-top:12px}
-.sec-head p{color:var(--ink-soft);margin-top:14px}
+section{padding:80px 0 0}
+.sec-head{max-width:640px;margin:0 auto 48px;text-align:center}
+.sec-head h2{font-size:clamp(26px,3.8vw,38px);margin-top:12px}
+.sec-head p{color:var(--ink-soft);margin-top:12px}
 
-.services{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.svc{background:var(--gray);border:1px solid var(--line);display:flex;flex-direction:column;transition:border-color .2s}
-.svc:hover{border-color:var(--navy)}
-.svc .ph{aspect-ratio:4/3;overflow:hidden}
-.svc img{width:100%;height:100%;object-fit:cover;filter:saturate(.85)}
-.svc .body{padding:22px 22px 24px}
-.svc h3{font-size:18px;margin-bottom:8px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:var(--card);border-radius:var(--r-lg);padding:32px 28px;box-shadow:0 8px 30px rgba(0,103,103,.06);transition:transform .25s,box-shadow .25s}
+.svc:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.svc .ic{width:48px;height:48px;border-radius:14px;background:var(--teal-tint);color:var(--teal);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;margin-bottom:18px}
+.svc h3{font-size:19px;margin-bottom:8px}
 .svc p{font-size:14px;color:var(--ink-soft)}
 
-.steps{background:var(--navy-deep);color:#fff;padding:96px 0}
-.steps .sec-head h2{color:#fff}
-.steps .sec-head p{color:rgba(255,255,255,.75)}
-.step-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.step{border:1px solid rgba(212,175,55,.35);padding:34px 30px}
-.step .num{font-family:'Montserrat',sans-serif;font-weight:800;font-size:40px;color:var(--amber);line-height:1}
-.step h3{color:#fff;font-size:20px;margin:16px 0 8px}
-.step p{font-size:14px;color:rgba(255,255,255,.78)}
+.doc{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.doc img{border-radius:var(--r-xl);box-shadow:var(--shadow)}
+.doc h2{font-size:clamp(26px,3.8vw,38px);margin:14px 0 16px}
+.doc p{color:var(--ink-soft);margin-bottom:14px}
+.checks{list-style:none;margin-top:18px}
+.checks li{display:flex;gap:12px;align-items:flex-start;padding:7px 0;font-weight:600}
+.checks li::before{content:"✓";color:var(--teal);font-weight:800;font-size:17px}
 
-.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.about img{border:1px solid var(--line);filter:saturate(.9)}
-.about h2{font-size:clamp(28px,4vw,40px);margin:12px 0 18px}
-.about p{color:var(--ink-soft);margin-bottom:14px}
-.checks{margin:20px 0 0;list-style:none}
-.checks li{display:flex;gap:12px;align-items:flex-start;padding:8px 0;font-weight:500}
-.checks li::before{content:"✓";color:var(--amber);font-weight:800;font-size:18px;line-height:1.4}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gallery figure{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3;box-shadow:0 8px 30px rgba(0,103,103,.06)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.gallery figure:hover img{transform:scale(1.05)}
 
-.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.quote{background:var(--gray);border:1px solid var(--line);padding:34px 30px;display:flex;flex-direction:column;gap:14px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quote{background:var(--card);border-radius:var(--r-lg);padding:34px 30px;box-shadow:0 8px 30px rgba(0,103,103,.06);display:flex;flex-direction:column;gap:14px}
 .quote p{color:var(--ink-soft);font-size:15px;line-height:1.7}
-.quote .who{font-size:13px;font-weight:700;color:var(--navy)}
+.quote .who{font-size:13px;font-weight:700;color:var(--teal)}
 
-.contact{background:var(--gray);border-top:1px solid var(--line);padding:96px 0}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
-.contact h2{font-size:clamp(28px,4vw,40px);margin:12px 0 22px}
-.info-row{display:flex;gap:16px;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
-.info-row .k{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--navy);min-width:110px}
-.contact .btn{margin-top:26px}
-.form-mock{background:#fff;border:1px solid var(--line)}
-.form-mock .fh{background:var(--navy);color:#fff;padding:18px 26px;font-family:'Montserrat',sans-serif;font-weight:700}
-.form-mock .fb{padding:26px;display:flex;flex-direction:column;gap:16px}
-.field label{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
-.field .box{border:1px solid var(--line);height:48px;background:var(--gray)}
-.field .box.ta{height:96px}
-.form-mock .btn{width:100%;margin-top:4px}
-.form-note{font-size:12px;color:var(--ink-soft);text-align:center}
+.contact{background:var(--teal);color:#fff;margin-top:80px;padding:80px 0;border-radius:var(--r-xl) var(--r-xl) 0 0}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.contact .eyebrow{color:#99f1f1}
+.contact h2{color:#fff;font-size:clamp(26px,3.8vw,38px);margin:14px 0 22px}
+.info-row{display:flex;gap:16px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.22);font-size:15px}
+.info-row .k{font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#99f1f1;min-width:120px}
+.contact .btn{margin-top:26px;background:#fff;color:var(--teal)}
+.contact .btn:hover{background:#e9fffe}
+.contact img{border-radius:var(--r-lg)}
 
-footer{padding:48px 0;text-align:center;color:var(--ink-soft);font-size:13px;border-top:1px solid var(--line)}
-footer .brand-f{font-family:'Montserrat',sans-serif;font-weight:800;font-size:18px;color:var(--navy);display:block;margin-bottom:8px}
+footer{padding:48px 0;text-align:center;color:var(--ink-soft);font-size:13px}
+footer .brand-f{font-weight:800;font-size:18px;color:var(--teal);display:block;margin-bottom:8px}
 footer .demo-note{margin-top:14px;font-size:12px;opacity:.7}
 
 @media(max-width:960px){
-  .services{grid-template-columns:1fr 1fr}
-  .step-row,.quotes{grid-template-columns:1fr}
-  .about,.contact-grid{grid-template-columns:1fr;gap:40px}
-  .nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;padding:24px 0;gap:18px}
+  .hero-grid,.doc,.contact-grid{grid-template-columns:1fr;gap:36px}
+  .services,.gallery,.quotes{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:rgba(249,249,251,.98);flex-direction:column;padding:24px 0;gap:18px}
   .nav-links.open{display:flex}
   .menu-toggle{display:block}
 }
-@media(max-width:600px){.services{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#">Herr Dr. med. dent. Michael Holzner<em>.</em></a>
+    <a class="brand" href="#">Herr Dr. med. dent. Michael Holzner</a>
     <nav class="nav-links" id="links">
       <a href="#leistungen">Leistungen</a>
-      <a href="#ablauf">So geht's</a>
-      <a href="#ueber">Über uns</a>
+      <a href="#praxis">Praxis</a>
+      <a href="#stimmen">Patientenstimmen</a>
       <a href="#kontakt">Kontakt</a>
       <a class="nav-phone" href="tel:08031352288">08031 352288</a>
-      <a class="btn btn-amber" href="#kontakt">Kostenlos anfragen</a>
+      <a class="btn btn-teal" href="tel:08031352288">Termin vereinbaren</a>
     </nav>
     <button class="menu-toggle" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
   </div>
 </header>
 
-<section class="hero" style="padding-top:200px">
-  <img class="hero-img" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=2000&q=75&fm=jpg&fit=crop" alt="Herr Dr. med. dent. Michael Holzner in Rosenheim" loading="eager">
-  <div class="wrap hero-inner">
-    <span class="eyebrow">Rosenheim & Umgebung</span>
-    <h1>Herr Dr. med. dent. Michael Holzner</h1>
-    <p class="sub">Qualität, auf die Sie sich verlassen können — pünktlich, sauber und zum fairen Preis.</p>
-    <div class="hero-cta">
-      <a class="btn btn-amber" href="#kontakt">Kostenlos anfragen</a>
-      <a class="btn btn-ghost" href="tel:08031352288">08031 352288</a>
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Zahnarztpraxis · Rosenheim</span>
+      <h1>Herr Dr. med. dent. Michael Holzner</h1>
+      <p class="sub">Moderne Zahnmedizin mit Einfühlungsvermögen — für gesunde Zähne und entspannte Besuche.</p>
+      <div class="hero-cta">
+        <a class="btn btn-teal" href="tel:08031352288">Termin vereinbaren</a>
+        <a class="btn btn-ghost" href="#leistungen">Unsere Leistungen</a>
+      </div>
+      <div class="trust">
+        <span class="chip">Kassen- & Privatpatienten</span>
+        <span class="chip"><span class="stars">★★★★★</span>5.0 · 43 Bewertungen</span>
+        <span class="chip">Angstpatienten willkommen</span>
+      </div>
     </div>
-    <div class="badges">
-      <span class="badge"><span class="dot"></span>Regionaler Fachbetrieb</span>
-      <span class="badge"><span class="stars">★★★★★</span>5.0 · 43 Bewertungen</span>
-      <span class="badge"><span class="dot"></span>Kostenlose Erstberatung</span>
-    </div>
+    <div class="hero-ph"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=2000&q=75&fm=jpg&fit=crop" alt="Herr Dr. med. dent. Michael Holzner in Rosenheim" loading="eager"></div>
   </div>
-</section>
+</div>
 
 <section id="leistungen">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Unsere Leistungen</span>
-      <h2>Alles aus einer Hand</h2>
-      <p>Beispielleistungen — sprechen Sie uns auf Ihr Projekt an, wir beraten Sie ehrlich.</p>
+      <h2>Medizin, die sich Zeit nimmt</h2>
+      <p>Beispielleistungen — Ihr individueller Behandlungsplan entsteht im persönlichen Gespräch.</p>
     </div>
     <div class="services">
-      <div class="svc"><div class="ph"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=70&fm=jpg&fit=crop" alt="Leistung" loading="lazy"></div>
-        <div class="body"><h3>Beratung & Planung</h3><p>Wir hören zu, prüfen vor Ort und planen die beste Lösung für Ihr Anliegen.</p></div></div>
-      <div class="svc"><div class="ph"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=70&fm=jpg&fit=crop" alt="Leistung" loading="lazy"></div>
-        <div class="body"><h3>Ausführung vom Profi</h3><p>Saubere Arbeit durch erfahrene Fachkräfte — termingerecht und zuverlässig.</p></div></div>
-      <div class="svc"><div class="ph"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=70&fm=jpg&fit=crop" alt="Leistung" loading="lazy"></div>
-        <div class="body"><h3>Wartung & Service</h3><p>Auch nach dem Projekt für Sie da: Wartung, Pflege und schnelle Hilfe im Notfall.</p></div></div>
-      <div class="svc"><div class="ph"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=800&q=70&fm=jpg&fit=crop" alt="Leistung" loading="lazy"></div>
-        <div class="body"><h3>Individuelle Lösungen</h3><p>Kein Projekt ist wie das andere — wir finden die Lösung, die zu Ihnen passt.</p></div></div>
+      <div class="svc"><div class="ic">01</div><h3>Prophylaxe & Zahnreinigung</h3><p>Professionelle Vorsorge für langfristig gesunde Zähne.</p></div>
+      <div class="svc"><div class="ic">02</div><h3>Implantologie</h3><p>Feste Zähne statt Lücke — modern geplant, schonend eingesetzt.</p></div>
+      <div class="svc"><div class="ic">03</div><h3>Ästhetische Zahnheilkunde</h3><p>Bleaching, Veneers und Korrekturen für Ihr schönstes Lächeln.</p></div>
+      <div class="svc"><div class="ic">04</div><h3>Wurzelbehandlung</h3><p>Zahnerhalt mit moderner Endodontie — präzise und schmerzarm.</p></div>
+      <div class="svc"><div class="ic">05</div><h3>Kinderzahnheilkunde</h3><p>Geduldig und spielerisch — damit der Zahnarztbesuch normal wird.</p></div>
+      <div class="svc"><div class="ic">✓</div><h3>Beratung & Zweitmeinung</h3><p>Verständlich erklärt, ohne Fachchinesisch — damit Sie gut entscheiden können.</p></div>
     </div>
   </div>
 </section>
 
-<div class="steps" id="ablauf">
-  <div class="wrap">
-    <div class="sec-head">
-      <span class="eyebrow">So einfach geht's</span>
-      <h2>In drei Schritten zum Ergebnis</h2>
-    </div>
-    <div class="step-row">
-      <div class="step"><div class="num">1</div><h3>Anfragen</h3><p>Rufen Sie an oder schreiben Sie uns — die Erstberatung ist kostenlos und unverbindlich.</p></div>
-      <div class="step"><div class="num">2</div><h3>Angebot erhalten</h3><p>Wir prüfen Ihr Anliegen und erstellen ein transparentes Festpreis-Angebot.</p></div>
-      <div class="step"><div class="num">3</div><h3>Zurücklehnen</h3><p>Wir erledigen den Rest — pünktlich, sauber und mit Qualitätsgarantie.</p></div>
-    </div>
-  </div>
-</div>
-
-<section id="ueber">
-  <div class="wrap about">
-    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1000&q=75&fm=jpg&fit=crop" alt="Team Herr Dr. med. dent. Michael Holzner" loading="lazy">
+<section id="praxis">
+  <div class="wrap doc">
+    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1000&q=75&fm=jpg&fit=crop" alt="Behandlungsteam Herr Dr. med. dent. Michael Holzner" loading="lazy">
     <div>
-      <span class="eyebrow">Über uns</span>
-      <h2>Ein Betrieb aus Rosenheim — für Rosenheim</h2>
-      <p>Als regional verwurzelter Betrieb stehen wir für ehrliche Arbeit und kurze Wege. Unsere Kundinnen und Kunden empfehlen uns weiter, weil wir halten, was wir versprechen.</p>
+      <span class="eyebrow">Ihre Praxis</span>
+      <h2>Willkommen bei Herr Dr. med. dent. Michael Holzner</h2>
+      <p>Wir nehmen uns Zeit für Sie: moderne Diagnostik, schonende Behandlungen und ein Team, das zuhört. Besonders Angstpatientinnen und -patienten begleiten wir geduldig und einfühlsam.</p>
       <ul class="checks">
-        <li>Transparente Festpreise — keine versteckten Kosten</li>
-        <li>Erfahrene Fachkräfte aus der Region</li>
-        <li>Zuverlässige Termine, saubere Übergabe</li>
+        <li>Moderne Ausstattung & schonende Verfahren</li>
+        <li>Kurze Wartezeiten durch gute Terminplanung</li>
+        <li>Angstpatienten willkommen</li>
         <li>5.0 Sterne bei 43 Google-Bewertungen</li>
       </ul>
     </div>
@@ -209,13 +180,28 @@ footer .demo-note{margin-top:14px;font-size:12px;opacity:.7}
 <section>
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Kundenstimmen</span>
-      <h2>Das sagen unsere Kunden</h2>
+      <span class="eyebrow">Einblicke</span>
+      <h2>Unsere Räume</h2>
+    </div>
+    <div class="gallery">
+      <figure><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=75&fm=jpg&fit=crop" alt="Praxis" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=75&fm=jpg&fit=crop" alt="Praxis" loading="lazy"></figure>
+      <figure><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=75&fm=jpg&fit=crop" alt="Praxis" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="stimmen">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Patientenstimmen</span>
+      <h2>5.0 von 5 — sagen unsere Patienten</h2>
+      <p><span class="stars">★★★★★</span> &nbsp;43 Bewertungen auf Google</p>
     </div>
     <div class="quotes">
-      <div class="quote"><span class="stars">★★★★★</span><p>„Schnelle Terminvergabe, faire Beratung und ein Ergebnis, das überzeugt. Gerne wieder."</p><span class="who">Kunde aus Rosenheim</span></div>
-      <div class="quote"><span class="stars">★★★★★</span><p>„Endlich ein Betrieb, der zurückruft und pünktlich kommt. Absolute Empfehlung."</p><span class="who">Google-Rezension</span></div>
-      <div class="quote"><span class="stars">★★★★★</span><p>„Kompetent, freundlich, sauber gearbeitet — und der Preis hat gestimmt."</p><span class="who">Google-Rezension</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Zum ersten Mal keine Angst vorm Termin. Alles wurde ruhig erklärt, nichts wurde aufgedrängt."</p><span class="who">Patientin aus Rosenheim</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Freundliches Team, kurze Wartezeit und eine wirklich gründliche Behandlung."</p><span class="who">Google-Rezension</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Kompetent und menschlich — hier fühlt man sich gut aufgehoben. Klare Empfehlung."</p><span class="who">Google-Rezension</span></div>
     </div>
   </div>
 </section>
@@ -223,33 +209,27 @@ footer .demo-note{margin-top:14px;font-size:12px;opacity:.7}
 <div class="contact" id="kontakt">
   <div class="wrap contact-grid">
     <div>
-      <span class="eyebrow">Kontakt</span>
-      <h2>Kostenlos & unverbindlich anfragen</h2>
+      <span class="eyebrow">Termin & Kontakt</span>
+      <h2>Wir sind für Sie da</h2>
       <div class="info-row"><span class="k">Adresse</span><span>Kaiserstraße 36, 83022 Rosenheim, Deutschland</span></div>
       <div class="info-row"><span class="k">Telefon</span><a href="tel:08031352288"><b>08031 352288</b></a></div>
-      <div class="info-row"><span class="k">Erreichbar</span><span>Mo – Fr 8:00 – 18:00 Uhr</span></div>
-      <a class="btn btn-navy" href="tel:08031352288">Jetzt anrufen — wir beraten Sie gerne</a>
+      <div class="info-row"><span class="k">Sprechzeiten</span><span>Mo – Fr 8:00 – 18:00 Uhr · Termine nach Vereinbarung</span></div>
+      <div class="info-row"><span class="k">Notfälle</span><span>Rufen Sie uns an — wir helfen schnellstmöglich.</span></div>
+      <a class="btn" href="tel:08031352288">Jetzt anrufen & Termin vereinbaren</a>
     </div>
-    <div class="form-mock">
-      <div class="fh">Ihre Anfrage an Herr Dr. med. dent. Michael Holzner</div>
-      <div class="fb">
-        <div class="field"><label>Ihr Name</label><div class="box"></div></div>
-        <div class="field"><label>Telefon oder E-Mail</label><div class="box"></div></div>
-        <div class="field"><label>Ihr Anliegen</label><div class="box ta"></div></div>
-        <a class="btn btn-amber" href="tel:08031352288">Anfrage senden</a>
-        <p class="form-note">Design-Vorschau — Anfragen aktuell bequem per Telefon: 08031 352288</p>
-      </div>
-    </div>
+    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=2000&q=75&fm=jpg&fit=crop" alt="Herr Dr. med. dent. Michael Holzner" loading="lazy">
   </div>
 </div>
 
 <footer>
   <div class="wrap">
-    <span class="brand-f">Herr Dr. med. dent. Michael Holzner<em style="color:var(--amber)">.</em></span>
+    <span class="brand-f">Herr Dr. med. dent. Michael Holzner</span>
     <span>Kaiserstraße 36, 83022 Rosenheim, Deutschland · 08031 352288</span>
     <p class="demo-note">© 2026 Herr Dr. med. dent. Michael Holzner · Unverbindliche Design-Vorschau</p>
   </div>
 </footer>
 
+<script>
+</script>
 </body>
 </html>
