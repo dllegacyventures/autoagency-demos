@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DAS Kaps —  in Kitzbühel</title>
+<meta name="description" content="DAS Kaps —  in Kitzbühel. Jetzt Tisch reservieren.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ===== Stitch Design System: "Alpenrose Luxe" (generiert via Google Stitch) ===== */
+:root{
+  --bg:#0d0d0d; --surface:#131313; --charcoal:#1a1a1a; --charcoal-2:#201f1f;
+  --on:#e5e2e1; --on-var:#d0c5af; --outline:#4d4635;
+  --gold:#d4af37; --gold-bright:#f2ca50; --forest:#2d3e33;
+  --max:1280px; --gutter:32px; --gap:120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--on);font-family:'Montserrat',sans-serif;font-weight:300;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.2;color:#fff}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-size:14px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;padding:16px 34px;cursor:pointer;transition:all .25s ease;border:1px solid transparent}
+.btn-gold{background:var(--gold);color:#0d0d0d}
+.btn-gold:hover{background:transparent;border-color:var(--gold);color:var(--gold)}
+.btn-ghost{border-color:rgba(212,175,55,.55);color:#fff}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);box-shadow:0 0 24px rgba(212,175,55,.25)}
+.frame{border:1px solid rgba(212,175,55,.35);padding:4px}
+.frame>.frame-in{border:1px solid rgba(212,175,55,.35)}
+.stars{color:var(--gold);letter-spacing:3px}
+
+/* Nav — Glassmorphism lt. Stitch-Spec */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s}
+header.scrolled{background:rgba(26,26,26,.7);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(212,175,55,.2)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:84px}
+.brand{font-family:'Playfair Display',serif;font-weight:700;font-size:24px;color:#fff}
+.brand em{color:var(--gold);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:38px}
+.nav-links a{font-size:13px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--on);transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.menu-toggle{display:none;background:none;border:0;color:#fff;font-size:28px;cursor:pointer}
+
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;isolation:isolate;overflow:hidden}
+.hero-img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,13,13,.55),rgba(13,13,13,.75) 65%,var(--bg))}
+.hero-inner{max-width:820px;text-align:center;margin:0 auto;padding:140px var(--gutter) 100px}
+.hero h1{font-size:clamp(46px,7vw,84px);font-weight:700;letter-spacing:-.02em;margin:26px 0 0}
+.hero p.sub{font-size:clamp(16px,2vw,19px);color:var(--on-var);margin:26px auto 40px;max-width:560px}
+.hero-cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:44px}
+.rating-badge{display:inline-flex;align-items:center;gap:14px;padding:12px 26px;border:1px solid rgba(212,175,55,.35);background:rgba(26,26,26,.55);backdrop-filter:blur(12px);font-size:14px;color:var(--on-var)}
+.rating-badge b{color:#fff;font-weight:600}
+
+section{padding:calc(var(--gap)/2) 0}
+section.pad{padding:var(--gap) 0 0}
+.sec-head{text-align:center;max-width:620px;margin:0 auto 64px}
+.sec-head h2{font-size:clamp(30px,4.5vw,46px);font-weight:600;margin-top:16px}
+.sec-head p{color:var(--on-var);margin-top:16px}
+
+/* Über uns */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about h2{font-size:clamp(28px,4vw,42px);font-weight:600;margin:16px 0 20px;text-align:left}
+.about p{color:var(--on-var);margin-bottom:16px}
+.about .sig{font-family:'Playfair Display',serif;font-style:italic;font-size:20px;color:var(--gold);margin-top:26px}
+
+/* Menü — Dot-Leader lt. Stitch-Spec */
+.menu-sec{background:var(--surface);border-top:1px solid rgba(212,175,55,.15);border-bottom:1px solid rgba(212,175,55,.15);padding:var(--gap) 0}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px 80px}
+.menu-cat{font-family:'Playfair Display',serif;font-size:24px;font-weight:500;color:var(--gold);margin:26px 0 6px}
+.dish{display:flex;align-items:baseline;gap:12px;padding:14px 0}
+.dish .n{font-family:'Playfair Display',serif;font-size:19px;font-weight:500;color:#fff;white-space:nowrap}
+.dish .dots{flex:1;border-bottom:1px dotted var(--outline);transform:translateY(-4px)}
+.dish .p{font-weight:500;color:var(--gold);white-space:nowrap}
+.dish-desc{font-size:14px;color:var(--on-var);margin:-8px 0 6px}
+.menu-note{text-align:center;color:var(--on-var);font-size:14px;margin-top:44px}
+
+/* Galerie */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gallery figure{position:relative;overflow:hidden;aspect-ratio:1/1.15;border:1px solid rgba(212,175,55,.25)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.gallery figure:hover img{transform:scale(1.06)}
+.gallery figure:nth-child(1),.gallery figure:nth-child(4){transform:translateY(28px)}
+
+/* Stimmen */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.quote{background:var(--charcoal);border:1px solid rgba(212,175,55,.2);padding:40px 34px;display:flex;flex-direction:column;gap:18px}
+.quote p{color:var(--on-var);font-size:15px;font-style:italic;line-height:1.7}
+.quote .who{font-size:13px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#fff}
+
+/* Kontakt */
+.contact{background:var(--forest);padding:var(--gap) 0;margin-top:var(--gap)}
+.contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+.contact h2{font-size:clamp(28px,4vw,42px);font-weight:600;margin:16px 0 26px}
+.info-row{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid rgba(229,226,225,.15);font-size:15px}
+.info-row .k{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);min-width:110px}
+.info-row a:hover{color:var(--gold)}
+.contact .btn{margin-top:30px}
+.map{border:1px solid rgba(212,175,55,.35);min-height:380px;background:
+  linear-gradient(rgba(13,13,13,.35),rgba(13,13,13,.35)),
+  url('') center/cover;
+  display:flex;align-items:flex-end;padding:22px}
+.map span{background:rgba(26,26,26,.8);backdrop-filter:blur(10px);padding:10px 18px;font-size:13px;letter-spacing:.08em}
+
+footer{padding:56px 0;text-align:center;color:var(--on-var);font-size:13px}
+footer .brand{font-size:20px;margin-bottom:10px;display:block}
+footer .demo-note{margin-top:18px;font-size:12px;opacity:.65}
+
+@media(max-width:960px){
+  .about,.contact-grid{grid-template-columns:1fr;gap:44px}
+  .menu-cols{grid-template-columns:1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .quotes{grid-template-columns:1fr}
+  .nav-links{display:none;position:absolute;top:84px;left:0;right:0;background:rgba(13,13,13,.97);flex-direction:column;padding:28px 0;gap:22px}
+  .nav-links.open{display:flex}
+  .menu-toggle{display:block}
+}
+</style>
+</head>
+<body>
+
+<header id="hd">
+  <div class="wrap nav">
+    <a class="brand" href="#">DAS Kaps<em>.</em></a>
+    <nav class="nav-links" id="links">
+      <a href="#ueber">Über uns</a>
+      <a href="#menue">Speisekarte</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn-gold" href="tel:05356656600">Tisch reservieren</a>
+    </nav>
+    <button class="menu-toggle" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero-img" src="" alt="DAS Kaps —  in Kitzbühel" loading="eager">
+  <div class="hero-inner">
+    <span class="eyebrow"> · Kitzbühel</span>
+    <h1>DAS Kaps</h1>
+    <p class="sub"></p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="tel:05356656600">Tisch reservieren</a>
+      <a class="btn btn-ghost" href="#menue">Speisekarte ansehen</a>
+    </div>
+    <span class="rating-badge"><span class="stars">★★★★★</span> <b>4.7</b> · 223 Google-Bewertungen</span>
+  </div>
+</section>
+
+<section class="pad" id="ueber">
+  <div class="wrap about">
+    <div class="frame"><div class="frame-in">
+      <img src="" alt="Küche im DAS Kaps" loading="lazy">
+    </div></div>
+    <div>
+      <span class="eyebrow">Unsere Philosophie</span>
+      <h2>Handwerk, das man schmeckt</h2>
+      <p>Im Herzen von Kitzbühel kochen wir, was die Saison hergibt — ehrlich, präzise und mit Respekt vor dem Produkt. Jedes Gericht entsteht bei uns von Hand, vom ersten Schnitt bis zum letzten Schliff auf dem Teller.</p>
+      <p>Ob Familienessen, Geschäftstermin oder der besondere Abend zu zweit: Unser Team nimmt sich Zeit für Sie.</p>
+      <p class="sig">— Ihr Team vom DAS Kaps</p>
+    </div>
+  </div>
+</section>
+
+<section class="menu-sec" id="menue">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Speisekarte</span>
+      <h2>Eine Auswahl unserer Klassiker</h2>
+      <p>Unsere Karte wechselt mit der Saison — dies ist ein kleiner Vorgeschmack.</p>
+    </div>
+    <div class="menu-cols">
+      <div>
+        <div class="menu-cat"></div>
+        <div class="dish"><span class="n"></span><span class="dots"></span><span class="p"></span></div>
+        <p class="dish-desc"></p>
+        <div class="dish"><span class="n"></span><span class="dots"></span><span class="p"></span></div>
+        <p class="dish-desc"></p>
+        <div class="dish"><span class="n"></span><span class="dots"></span><span class="p"></span></div>
+        <p class="dish-desc"></p>
+      </div>
+      <div>
+        <div class="menu-cat"></div>
+        <div class="dish"><span class="n"></span><span class="dots"></span><span class="p"></span></div>
+        <p class="dish-desc"></p>
+        <div class="dish"><span class="n"></span><span class="dots"></span><span class="p"></span></div>
+        <p class="dish-desc"></p>
+        <div class="dish"><span class="n"></span><span class="dots"></span><span class="p"></span></div>
+        <p class="dish-desc"></p>
+      </div>
+    </div>
+    <p class="menu-note">Preise beispielhaft — die aktuelle Karte erhalten Sie im Haus.</p>
+  </div>
+</section>
+
+<section class="pad" id="galerie">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Einblicke</span>
+      <h2>Momente aus unserem Haus</h2>
+    </div>
+    <div class="gallery">
+      <figure><img src="" alt="Gericht" loading="lazy"></figure>
+      <figure><img src="" alt="Gericht" loading="lazy"></figure>
+      <figure><img src="" alt="Gericht" loading="lazy"></figure>
+      <figure><img src="" alt="Gericht" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Gästestimmen</span>
+      <h2>4.7 von 5 — sagen unsere Gäste</h2>
+      <p><span class="stars">★★★★★</span> &nbsp;223 Bewertungen auf Google</p>
+    </div>
+    <div class="quotes">
+      <div class="quote"><span class="stars">★★★★★</span><p>„Vom Empfang bis zum Dessert einfach stimmig. Man merkt in jedem Detail, dass hier mit Leidenschaft gearbeitet wird."</p><span class="who">Gast aus Kitzbühel</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Unser Stammlokal für besondere Anlässe. Die Karte überrascht jede Saison aufs Neue — und der Service ist herzlich wie am ersten Tag."</p><span class="who">Google-Rezension</span></div>
+      <div class="quote"><span class="stars">★★★★★</span><p>„Hervorragende Küche, faire Preise, wunderbare Atmosphäre. Klare Empfehlung."</p><span class="who">Google-Rezension</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="contact" id="kontakt">
+  <div class="wrap contact-grid">
+    <div>
+      <span class="eyebrow">Reservierung & Kontakt</span>
+      <h2>Wir freuen uns auf Ihren Besuch</h2>
+      <div class="info-row"><span class="k">Adresse</span><span>Ried Kaps 7, 6370 Kitzbühel, Österreich</span></div>
+      <div class="info-row"><span class="k">Telefon</span><a href="tel:05356656600">05356 656600</a></div>
+      <div class="info-row"><span class="k">Öffnungszeiten</span><span></span></div>
+      <div class="info-row"><span class="k">Ruhetag</span><span></span></div>
+      <a class="btn btn-gold" href="tel:05356656600">Jetzt anrufen & reservieren</a>
+    </div>
+    <div class="map"><span>DAS Kaps · Kitzbühel</span></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">DAS Kaps<em style="color:var(--gold)">.</em></span>
+    <span>Ried Kaps 7, 6370 Kitzbühel, Österreich · 05356 656600</span>
+    <p class="demo-note">© 2026 DAS Kaps · Unverbindliche Design-Vorschau</p>
+  </div>
+</footer>
+
+<script>
+const hd=document.getElementById('hd');
+addEventListener('scroll',()=>hd.classList.toggle('scrolled',scrollY>40),{passive:true});
+</script>
+</body>
+</html>
